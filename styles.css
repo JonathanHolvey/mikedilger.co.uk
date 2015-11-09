@@ -1,0 +1,133 @@
+a:hover  {
+	text-decoration:underline;
+	font-weight:bold;
+	color:#44633f;
+}
+a:link {
+	text-decoration:none;
+	font-weight:bold;
+	color:#44633f;
+}
+a:visited  {
+	text-decoration:none;
+	font-weight:bold;
+	color:#44633f;
+}
+body { 
+	font-family:Verdana, Arial, Helvetica, sans-serif; 
+	font-size:12px;
+	color:#44633f;
+	margin:0;
+	background-color:#CDD3CC;
+}
+img {
+	border:0;
+}
+html { 
+	overflow-y: scroll; /* shows vertical scrollbar permenantly */
+}
+p { 
+	margin:0;
+	padding-top:12px;
+}
+p a {
+	font-size:10px;
+}
+ul {
+	margin-bottom:0px;
+}
+#container {
+	margin:36px auto;
+	width:740px;
+	background:white;
+	position:relative;
+	padding:10px;
+	padding-bottom:15px;
+}
+#content {
+	padding:0 20px 12px 20px;
+	overflow:hidden; /*forces floated divs to stretch the content div */
+}
+#header {
+	padding:6px 0 13px 74px;
+}
+.navBar {
+	background-color:#EAEFE9;
+	border-top:1px solid #B5C6B3;
+	border-bottom:1px solid #B5C6B3;
+	height:20px;
+	width:676px;
+	position:relative;
+	left:-10px;
+	line-height:20px;
+	z-index:1;
+	padding-left:84px;
+	color:black;
+	font-weight:bold;
+}
+.navLink {
+	float:left;
+	padding-right:37px;
+	position:relative;
+}
+.navLink img {
+	position:absolute;
+	top:8px;
+	left:-7px;
+}
+.pictureBanner {
+	margin:20px 0 15px 20px;
+}
+.pictureBanner img {
+	margin-right:-3px;
+}
+.snapshots {
+	width:325px;
+	margin:5px 5px 5px 30px;
+	float:right;
+}
+.title1 {
+	font-family:Arial; 
+	font-size:23px;
+	color:#44633f;
+}
+.title2 {
+	font-size:14px;
+	color:#44633f;
+	font-weight:bold;
+	padding-top:14px;
+}
+.tweet {
+	font-size:15px;
+}
+.tweet a {
+	color:gray;
+	font-weight:normal;
+}
+.event {
+	margin-top:5px;
+	line-height:1.5em;
+}
+.event .title {
+	font-weight:bold;
+}
+.event .date {
+	color:gray;
+}
+.event .location {
+	color:black;
+}
+#tweetsList {
+	float:left;
+	width:333px;
+	padding-right:20px;
+	border-right:1px solid #B5C6B3;
+}
+#eventsList {
+	float:left;
+	width:323px;
+	padding-left:20px;
+	border-left:1px solid #B5C6B3;
+	position:relative;
+	right:1px;
+}
