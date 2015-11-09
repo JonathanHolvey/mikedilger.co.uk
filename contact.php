@@ -2,35 +2,49 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Mike Dilger - Contact</title>
-	
 	<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="copyright" content="" />
 	<meta name="content-Language" content="english" /> 
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<meta name="created" content="December 2006" />
-	<meta name="updated" content="March 2010" />
-	
-	<link rel="stylesheet" href="styles.css" type="text/css" />
-	<style type="text/css">#link_contact{color:black}#arrow_contact{visibility:visible !important}</style>
+	<meta name="author" content="Jonathan Holvey" />
+
+	<?php include("resources.php"); ?>
+	<style type="text/css">
+		#header .image.left {
+			background:url('images/banner_21.jpg');
+		}
+		#header .image.right {
+			background:url('images/banner_14.jpg');
+		}
+		#contactLink {
+			color:#D16F24 !important;
+			cursor:default;
+		}
+	</style>
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div class="snapshots">
-		<img src="images/snapshot_contact.jpg" alt="Drop me a line"/>
+	<div id="content">
+		<div class="half left">
+			<p>I am represented by Hilary Knight Management Ltd.</p>
+			<p>Please contact her if you would like a showreel DVD, details of my availability, would like to book me for a talk or have any other queries.</p>
+			<div class="heading">here's how...</div>
+			<p>Phone: +44 (0)1604 781 818<br/>Mobile: +44 (0)7951 968 708</p>
+			<p>Email: <a href="mailto:hilary@hkmanagement.co.uk">hilary@hkmanagement.co.uk</a></p>
+			<p>Address:<br/>
+			H K Management<br/>
+			Grange Farm<br/>
+			Church Lane, Old<br/>
+			Northampton<br/>
+			NN6 9QZ</p>
+		</div>
+		<div class="half right">
+			<img src="images/banner_01.jpg" alt=""/>
+			<img src="images/banner_04.jpg" alt=""/>
+			<img src="images/banner_09.jpg" class="noSpace" alt=""/>
+		</div>
 	</div>
-	<div class="title1">Contact</div>
-	<p>I am represented by Hilary Knight Management.</p>
-	<p>Please contact her if you would like a showreel DVD, details of my availability, would like to book me for a talk or have any other queries.</p>
-	<p>Telephone: 01604 781 818</p>
-	<p>Email: <a href="mailto:hilary@hkmanagment.co.uk" style="font-size:12px">hilary@hkmanagement.co.uk</a></p>
-	<p>Address:</p>
-	<div style="padding-top:3px">
-		Hilary Knight Management<br/>
-		Grange Farm<br/>
-		Church Lane<br/>
-		Old<br/>
-		Northampton<br/>
-		NN6 9QZ
-	</div>
-	<?php include("footer.php") ?>
+	<?php include("footer.php"); ?>
+</body>
+</html>

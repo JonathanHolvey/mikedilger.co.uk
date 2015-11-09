@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<photos>
+	<photo src="banner_01.jpg" title="Autumn Squill"/>
+	<photo src="banner_02.jpg" title="Arctic Poppies"/>
+	<photo src="banner_03.jpg" title="Long Tailed Duck in breeding plumage"/>
+	<photo src="banner_04.jpg" title="Common poppies"/>
+	<photo src="banner_05.jpg" title="Melting icebergs in Arctic Canada"/>
+	<photo src="banner_06.jpg" title="Coastal flora"/>
+	<photo src="banner_07.jpg" title="Loch Maree, Scotland"/>
+	<photo src="banner_08.jpg" title="An English sunset"/>
+	<photo src="banner_09.jpg" title="Floating Ice in the Arctic"/>
+	<photo src="banner_10.jpg" title="Razorbills on the Outer Hebrides"/>
+	<photo src="banner_11.jpg" title="Pearl-bordered Fritillary butterfly"/>
+	<photo src="banner_12.jpg" title="Three-toed Sloth in Panama"/>
+	<photo src="banner_13.jpg" title="Panamanian mangrove"/>
+	<photo src="banner_14.jpg" title="Caribbean mangrove"/>
+	<photo src="banner_15.jpg" title="Snake's-head fritillary"/>
+	<photo src="banner_16.jpg" title="Herb paris"/>
+	<photo src="banner_17.jpg" title="Thrift or sea pink"/>
+	<photo src="banner_18.jpg" title="Brimstone butterfly feeding on knapweed"/>
+	<photo src="banner_19.jpg" title="Brown Hairstreak on Field Maple"/>
+	<photo src="banner_20.jpg" title="Blackthorn in flower"/>
+	<photo src="banner_21.jpg" title="Male snow Bunting in Arctic Canada"/>
+	<photo src="banner_22.jpg" title="Female Gyr Falcon &amp; chicks on Ellesmere Island"/>
+	<photo src="banner_23.jpg" title="Icy Landscape"/>
+	<photo src="banner_24.jpg" title="Arctic arnica"/>
+	<photo src="banner_25.jpg" title="Dolly &amp; Tammy - two Gyr Falcon chicks"/>
+	<photo src="banner_26.jpg" title="An Arctic Stoat egg-collecting"/>
+	<photo src="banner_27.jpg" title="Wood White Butterfly"/>
+	<photo src="photo_arctic.jpg" title="Watching Gyr Falcons"/>
+	<photo src="photo_wall.jpg" title=""/> <!-- home page image does not require caption -->
+	<photo src="photo_onCamera.jpg" title="A Piece to Camera on limestone flora"/>
+	<photo src="photo_badgers.jpg" title="A brace of badgers!"/>
+	<photo src="photo_tawny.jpg" title="A tawny owl flying from my hand"/>
+</photos>

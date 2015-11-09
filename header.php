@@ -1,24 +1,27 @@
-<div id="container">
-	<!-- header start -->
-	<div style="background-color:#CDD3CC;position:absolute;top:-14px;left:-17px;width:35px;height:50px;z-index:1"></div> <!-- this div hides the top left corner behind the bird -->
-	<img src="images/bird.png" alt="Bird" style="position:absolute;left:-36px;top:-7px;z-index:2"/>
-	<div id="header" class="title1">
-		Mike Dilger<br/>Presenter &amp; Naturalist
+<div id="header">
+	<div class="image left"></div>
+	<div class="image right"></div>
+	<div id="logo">
+		<a href="index.php"><img src="images/logo.png" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>	
 	</div>
-	<div class="navBar">
-		<div class="navLink"><img src="images/linkArrow.png" alt="" id="arrow_home" style="visibility:hidden"/> <a href="index.php" id="link_home">Home</a></div>
-		<div class="navLink"><img src="images/linkArrow.png" alt="" id="arrow_tvPresenting" style="visibility:hidden"/> <a href="tvPresenting.php" id="link_tvPresenting">TV presenting</a></div>
-		<div class="navLink"><img src="images/linkArrow.png" alt="" id="arrow_otherWork" style="visibility:hidden"/> <a href="otherWork.php" id="link_otherWork">Other work</a></div>
-		<div class="navLink"><img src="images/linkArrow.png" alt="" id="arrow_background" style="visibility:hidden"/> <a href="background.php" id="link_background">Background</a></div>
-		<div class="navLink"><img src="images/linkArrow.png" alt="" id="arrow_updates" style="visibility:hidden"/> <a href="updates.php" id="link_updates">Updates</a> <div style="position:absolute;bottom:100%;left:8px;color:red">NEW!</div></div>
-		<div class="navLink"><img src="images/linkArrow.png" alt="" id="arrow_contact" style="visibility:hidden"/> <a href="contact.php" id="link_contact">Contact</a></div>
+	<div id="navBar">
+		<a href="index.php" id="homeLink">home</a>&emsp;
+		<a href="broadcasting.php" id="broadcastingLink">broadcasting</a>&emsp;
+		<a href="writing.php" id="writingLink">writing</a>&emsp;
+		<a href="background.php" id="backgroundLink">background</a>&emsp;
+		<a href="updates.php" id="followLink">follow</a>&emsp;
+		<a href="contact.php" id="contactLink">contact</a>
 	</div>
-	<!-- header end -->
-	<div class="pictureBanner">
-		<img src="images/banner_camera.jpg" alt="Mike on camera"/>
-		<img src="images/banner_bird.jpg" alt="Mike with bird"/>
-		<img src="images/banner_fox.jpg" alt="Mike with fox"/>
-		<img src="images/banner_hedgehog.jpg" alt="Mike with hedgehog"/>
+</div>
+<!--div class="advert">
+	<img class="book" src="images/bookCover.png" alt=""/>
+	<div class="text">
+		<p style="font-size:22px;color:#869634;font-weight:bold;width:320px">My Garden and Other Animals</p>
+		<p>The story of a year-long journey to create my very own wildlife sanctuary</p>
+		<p>with illustrations by Christina Holvey</p>
+		<div class="button">
+			<a href="order.html">Order your copy now</a>
+			<div class="go"></div>
+		</div>
 	</div>
-	<!-- page content start -->
-	<div id="content">
+</div-->
