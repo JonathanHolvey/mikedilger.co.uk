@@ -39,7 +39,8 @@
 	border: 1px solid #FFB630;
 	cursor: pointer;
 }
-.advert .button:hover,.advert .button:hover a {
+.advert .button:hover,
+.advert .button:hover a {
 	background: #FFB630;
 	color: white !important;
 }
@@ -54,12 +55,13 @@
 .advert .button:hover .go {
 	background-position: bottom;
 }
-body,html {
+body,
+html {
 	margin: 0;
 	padding: 0;
 }
 body {
-	font-family: "Arial",sans-serief;
+	font-family: "Arial", sans-serif;
 	font-size: 15px;
 	line-height: 1.5em;
 	color: gray;
@@ -72,13 +74,15 @@ a {
 	color: #D16F24;
 	cursor: pointer;
 }
-a:hover,.playLink:hover a {
+a:hover,
+.playLink:hover a {
 	color: #FFB630 !important;
 }
 p {
 	margin: 0 0 10px 0;
 }
-ul,ol {
+ul,
+ol {
 	margin: 0 0 10px -20px;
 }
 #header {
@@ -106,7 +110,6 @@ ul,ol {
 	position: absolute;
 	top: 103px;
 	width: 100%;
-	text-align: center;
 }
 #logo img {
 	position: relative;
@@ -126,35 +129,42 @@ ul,ol {
 	margin: 0 auto;
 	overflow: auto;
 }
-.tweet,.event {
+.tweet,
+.event {
 	line-height: 22px;
 	margin-bottom: 10px;
 }
-.tweet .title,.event .title,.subHeading {
+.tweet .title,
+.event .title,
+.subHeading {
 	font-size: 120%;
 	color: #C3C65D;
 	line-height: 22px;
 }
-.tweet .title:before,.tweet .title:after {
+.tweet .title::before,
+.tweet .title::after {
 	font-weight: bold;
 	line-height: 22px;
 	font-size: 170%;
 	vertical-align: top;
 }
-.tweet .title:before {
+.tweet .title::before {
 	content: "\201C";
-	display: "inline-block";
+	display: inline-block;
 	margin-right: 3px;
 }
-.tweet .title:after {
+.tweet .title::after {
 	content: "\201D";
-	display: "inline-block";
+	display: inline-block;
 	margin-left: 3px;
 }
 .tweet .title a {
 	color: #FFB630;
 }
-.tweet .time,.event .description,.event .location,.event .time {
+.tweet .time,
+.event .description,
+.event .location,
+.event .time {
 	font-size: 80%;
 	color: gray;
 	line-height: 17px;
