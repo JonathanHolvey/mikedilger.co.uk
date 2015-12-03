@@ -4,6 +4,7 @@
 	include_once "script/createUpdates.php";
 	$xmlTweets = simplexml_load_file("tweets.xml");
 	$xmlEvents = simplexml_load_file("events.xml");
+	date_default_timezone_set("Europe/London");
 	
 	$maxTweets = 6;
 	$maxPastEvents = 7;
