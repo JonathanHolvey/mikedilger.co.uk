@@ -13,15 +13,3 @@
 		<a href="contact.php" id="contactLink">contact</a>
 	</div>
 </div>
-<!--div class="advert">
-	<img class="book" src="images/bookCover.png" alt=""/>
-	<div class="text">
-		<p style="font-size:22px;color:#869634;font-weight:bold;width:320px">My Garden and Other Animals</p>
-		<p>The story of a year-long journey to create my very own wildlife sanctuary</p>
-		<p>with illustrations by Christina Holvey</p>
-		<div class="button">
-			<a href="order.html">Order your copy now</a>
-			<div class="go"></div>
-		</div>
-	</div>
-</div-->
