@@ -240,3 +240,7 @@ ul,ol {
 	text-align: center !important;
 	margin-top: 10px;
 }
+.book img {
+	max-width: 150px;
+	border: 1px solid #D0D0D0;
+}

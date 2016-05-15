@@ -30,7 +30,7 @@
 			<div class="heading">books</div>
 			<div class="subHeading">My Garden and Other Animals</div>
 			<p>Look out for my latest book - <a href="http://www.amazon.co.uk/Mike-Dilger/e/B0034O9ASW/ref=ntt_dp_epwbk_0">Order your copy on Amazon</a></p>
-			<div class="book"><img src="images/myGarden.png" alt=""/></div>
+			<div class="book"><img src="images/myGarden.jpg" alt=""/></div>
 			<div class="subHeading">Nature's Top 40: Britain's Best Wildlife</div>
 			<p>To accompany the TV series</p>
 			<p class="book"><img src="images/britainsBestWildlife.jpg" alt=""/></p>
