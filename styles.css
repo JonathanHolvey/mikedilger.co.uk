@@ -39,7 +39,7 @@
 	border: 1px solid #FFB630;
 	cursor: pointer;
 }
-.advert .button: hover,.advert .button: hover a {
+.advert .button:hover,.advert .button:hover a {
 	background: #FFB630;
 	color: white !important;
 }
@@ -51,7 +51,7 @@
 	top: 3px;
 	background: url("images/go.png");
 }
-.advert .button: hover .go {
+.advert .button:hover .go {
 	background-position: bottom;
 }
 body,html {
