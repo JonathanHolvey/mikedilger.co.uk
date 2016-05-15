@@ -29,7 +29,10 @@
 		<div class="half left">
 			<div class="heading">books</div>
 			<div class="subHeading">My Garden and Other Animals</div>
-			<p>Look out for my latest book - <a href="http://www.amazon.co.uk/Mike-Dilger/e/B0034O9ASW/ref=ntt_dp_epwbk_0">Order your copy on Amazon</a></p>
+			<p>Look out for my latest book - <a href="https://www.amazon.co.uk/Nightingales-November-Mike-Dilger">Order your copy on Amazon</a></p>
+			<p>Have you ever wondered what our birds get up to when they're not pinching our peanuts, pilfering our pyracantha berries or nesting under the eaves of our homes? Find out the answers in <i>Nightingales in November</i>.</p>
+			<div class="book"><a href="https://www.amazon.co.uk/Nightingales-November-Mike-Dilger"><img src="images/nightingalesInNovember.jpg" alt=""/></a></div>
+			<div class="subHeading">My Garden and Other Animals</div>
 			<div class="book"><img src="images/myGarden.jpg" alt=""/></div>
 			<div class="subHeading">Nature's Top 40: Britain's Best Wildlife</div>
 			<p>To accompany the TV series</p>
