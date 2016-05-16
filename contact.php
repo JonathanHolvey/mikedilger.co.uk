@@ -12,10 +12,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_21.jpg');
+			background-image: url('images/banner_21.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_14.jpg');
+			background-image: url('images/banner_14.jpg');
 		}
 		#contactLink {
 			color:#D16F24 !important;

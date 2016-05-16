@@ -23,10 +23,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_02.jpg');
+			background-image :url('images/banner_02.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_11.jpg');
+			background-image :url('images/banner_11.jpg');
 		}
 		#homeLink {
 			color:#D16F24 !important;

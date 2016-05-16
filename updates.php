@@ -24,10 +24,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_05.jpg');
+			background-image: url('images/banner_05.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_04.jpg');
+			background-image: url('images/banner_04.jpg');
 		}
 		#followLink {
 			color:#D16F24 !important;

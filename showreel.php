@@ -12,10 +12,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_12.jpg');
+			background-image: url('images/banner_12.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_24.jpg');
+			background-image: url('images/banner_24.jpg');
 		}
 	</style>
 </head>

@@ -12,10 +12,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_19.jpg');
+			background-image: url('images/banner_19.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_22.jpg');
+			background-image: url('images/banner_22.jpg');
 		}
 		#broadcastingLink {
 			color:#D16F24 !important;
