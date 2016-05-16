@@ -5,56 +5,7 @@
 	light orange: 	FFB630
 	dark orange: 	D16F24	
 */
-.advert {
-	background: url("images/bookBanner.jpg");
-	border: 1px solid #C3C65D;
-	padding: 5px;
-	margin: -10px auto 15px auto;
-	width: 848px;
-	height: 128px;
-	position: relative;
-}
-.advert .book {
-	position: absolute;
-	top: -51px;
-	right: 10px;
-}
-.advert p {
-	text-align: right;
-	margin-right: 123px;
-	width: 300px;
-	float: right;
-	clear: both;
-	margin-bottom: 5px;
-	line-height: 1.2em !important;
-}
-.advert .button {
-	float: right;
-	clear: both;
-	margin-right: 123px;
-	text-align: center;
-	background: #D0D3A5;
-	padding: 1px 5px 3px 5px;
-	line-height: 18px;
-	border: 1px solid #FFB630;
-	cursor: pointer;
-}
-.advert .button:hover,
-.advert .button:hover a {
-	background: #FFB630;
-	color: white !important;
-}
-.advert .button .go {
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	position: relative;
-	top: 3px;
-	background: url("images/go.png");
-}
-.advert .button:hover .go {
-	background-position: bottom;
-}
+
 body,
 html {
 	margin: 0;
