@@ -51,16 +51,18 @@
 			</ul>
 		</div>
 		<div class="half right">
-			<img src="images/photo_badgers.jpg" alt=""/>
-			<img src="images/banner_04.jpg" alt=""/>
-			<img src="images/banner_14.jpg" alt=""/>
-			<img src="images/banner_24.jpg" alt=""/>
-			<img src="images/banner_12.jpg" alt=""/>
-			<img src="images/banner_02.jpg" alt=""/>
-			<img src="images/banner_25.jpg" alt=""/>
-			<img src="images/banner_26.jpg" alt=""/>
-			<img src="images/banner_27.jpg" alt=""/>
-			<img src="images/banner_05.jpg" alt="" class="noSpace"/>
+			<div class="image-block">
+				<img src="images/photo_badgers.jpg" alt=""/>
+				<img src="images/banner_04.jpg" alt=""/>
+				<img src="images/banner_14.jpg" alt=""/>
+				<img src="images/banner_24.jpg" alt=""/>
+				<img src="images/banner_12.jpg" alt=""/>
+				<img src="images/banner_02.jpg" alt=""/>
+				<img src="images/banner_25.jpg" alt=""/>
+				<img src="images/banner_26.jpg" alt=""/>
+				<img src="images/banner_27.jpg" alt=""/>
+				<img src="images/banner_05.jpg" alt="" class="noSpace"/>
+			</div>
 		</div>
 	</div>
 	<?php include("footer.php"); ?>

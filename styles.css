@@ -16,6 +16,7 @@ body {
 	font-size: 16px;
 	line-height: 1.5em;
 	color: gray;
+	min-width: 22.5em;
 }
 html {
 	overflow-y: scroll;
@@ -177,24 +178,28 @@ ol {
 	float: left;
 	border-right: 1px solid #D0D0D0;
 	left: 0.5px;
+	clear: left;
 }
 .half.right {
 	float: right;
 	border-left: 1px solid #D0D0D0;
 	right: 0.5px;
 }
-.half.right img {
-	width: 100%;
-	display: block;
-	margin-bottom: 0.625em;
-	min-width: 20em;
+.image-block {
+	text-align: center;
+	overflow: hidden;
 }
-.half.right img.noSpace {
+.image-block img {
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto 0.625em auto;
+}
+.image-block img:last-child {
 	margin-bottom: 0;
 }
 .playLink {
 	height: 1.875em;
-	background-image: url('images/play.png');
+	background-image: url('/images/play.png');
 	background-position: top left;
 	background-repeat: no-repeat;
 	white-space: nowrap;
@@ -209,6 +214,7 @@ ol {
 }
 .more {
 	display: none;
+	padding: 0 2%;
 	padding-top: 1.25em;
 	clear: both;
 }
@@ -231,14 +237,12 @@ ol {
 }
 
 @media all and (max-width: 35em) {
-	body {
-		font-size: 14px
-	}
 	#header .banner {
-		height: 11em;
+		height: 10em;
 	}
 	#logo {
-		top: 5.2em;
+		height: 7.2em;
+		top: 4.8em;
 	}
 	.image {
 		background-size: cover;
@@ -252,9 +256,25 @@ ol {
 	#navBar a {
 		margin: 0 0.3em;
 	}
+	.half.left, .half.right {
+		float: none;
+		border: none;
+		width: 100%;
+		margin-left: -0.1px;
+	}
+	.image-block img {
+		max-width: 100%;
+		width: 25em;
+	}
+	.image-block img:not(:first-child) {
+		display: none;
+	}
 }
 
 @media all and (max-width: 28em) {
+	body {
+		font-size: 14px
+	}
 	#header .banner {
 		height: 9em;
 	}

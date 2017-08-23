@@ -40,9 +40,11 @@
 			NN6 9QZ</p>
 		</div>
 		<div class="half right">
-			<img src="images/banner_01.jpg" alt=""/>
-			<img src="images/banner_04.jpg" alt=""/>
-			<img src="images/banner_09.jpg" class="noSpace" alt=""/>
+			<div class="image-block">
+				<img src="images/banner_01.jpg" alt=""/>
+				<img src="images/banner_04.jpg" alt=""/>
+				<img src="images/banner_09.jpg" class="noSpace" alt=""/>
+			</div>
 		</div>
 	</div>
 	<?php include("footer.php"); ?>
