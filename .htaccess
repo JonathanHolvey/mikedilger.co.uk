@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Remove www subdomain
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
+
+# Forward old urls
+Redirect 301 /index.html http://mikedilger.co.uk/index.php
+Redirect 301 /background.html http://mikedilger.co.uk/background.php
+Redirect 301 /tvpresenting.html http://mikedilger.co.uk/broadcasting.php
+Redirect 301 /tvPresenting.php http://mikedilger.co.uk/broadcasting.php
+Redirect 301 /otherWork.php http://mikedilger.co.uk/writing.php
