@@ -40,7 +40,7 @@
 	<div id="content">
 		<div class="half left">
 			<div style="float:right"><a href=" <?php echo $xmlTweets["link"] ?> "><i>@DilgerTV</i> on twitter</a></div>
-			<div class="heading">my latest tweets</div>
+			<div class="heading">twitter</div>
 			<?php
 				$count = 0;
 				foreach ($xmlTweets as $tweet) {
@@ -54,7 +54,7 @@
 			
 			</div>
 		<div class="half right">
-			<div class="heading">events coming up</div>
+			<div class="heading">coming up</div>
 			<?php
 				$eventFound = false;
 				foreach ($xmlEvents as $event) {

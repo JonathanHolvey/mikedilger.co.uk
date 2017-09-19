@@ -48,10 +48,10 @@
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
 		</div>
 		<div class="third right">
-			<div class="heading">latest tweet:</div>
+			<div class="heading">twitter</div>
 			<?php echo createTweet($xmlTweets -> tweet[0]); ?>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
-			<div class="heading">next event:</div>
+			<div class="heading">coming up</div>
 			<?php
 				$eventFound = false;
 				foreach ($xmlEvents as $event) {
