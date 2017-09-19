@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Mike Dilger - Contact</title>
@@ -12,10 +12,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_21.jpg');
+			background-image: url('images/banner_21.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_14.jpg');
+			background-image: url('images/banner_14.jpg');
 		}
 		#contactLink {
 			color:#D16F24 !important;
@@ -40,9 +40,11 @@
 			NN6 9QZ</p>
 		</div>
 		<div class="half right">
-			<img src="images/banner_01.jpg" alt=""/>
-			<img src="images/banner_04.jpg" alt=""/>
-			<img src="images/banner_09.jpg" class="noSpace" alt=""/>
+			<div class="image-block">
+				<img src="images/banner_01.jpg" alt=""/>
+				<img src="images/banner_04.jpg" alt=""/>
+				<img src="images/banner_09.jpg" class="noSpace" alt=""/>
+			</div>
 		</div>
 	</div>
 	<?php include("footer.php"); ?>

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <?php
 	include_once "script/createUpdates.php";
@@ -23,10 +23,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_02.jpg');
+			background-image :url('images/banner_02.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_11.jpg');
+			background-image :url('images/banner_11.jpg');
 		}
 		#homeLink {
 			color:#D16F24 !important;
@@ -48,10 +48,10 @@
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
 		</div>
 		<div class="third right">
-			<div class="heading">latest tweet:</div>
+			<div class="heading">twitter</div>
 			<?php echo createTweet($xmlTweets -> tweet[0]); ?>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
-			<div class="heading">next event:</div>
+			<div class="heading">coming up</div>
 			<?php
 				$eventFound = false;
 				foreach ($xmlEvents as $event) {
