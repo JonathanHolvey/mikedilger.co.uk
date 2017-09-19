@@ -81,7 +81,7 @@ ol {
 #navBar a {
 	color: #D0D0D0;
 	display: inline-block;
-	margin: 0 0.5em;
+	margin: 0 0.45em;
 }
 #navBar div {
 	display: inline-block;
@@ -203,16 +203,32 @@ ol {
 	margin-bottom: 0;
 }
 .playLink {
-	height: 1.875em;
-	background-image: url('/images/play.png');
-	background-position: top left;
-	background-repeat: no-repeat;
 	white-space: nowrap;
-	line-height: 1.875em;
 	cursor: pointer;
 	margin-bottom: 0.625em;
-	padding-left: 2.1875em;
-	float: left;
+	line-height: 1.875em;
+	vertical-align: baseline;
+	padding-left: 2.275em;	
+	position: relative;
+}
+.playLink::before {
+	content: "";
+	width: 1.875em;
+	height: 1.875em;
+	display: block;
+	background-color: #D16F24;
+	background-image: url("images/play.svg");
+	background-size: 0.8em;
+	background-repeat: no-repeat;
+	background-position: 0.7em center;
+	border-radius:  1.875em;
+	margin-right: 0.4em;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.playLink:hover::before {
+	background-color: #FFB630;
 }
 .playLink:hover {
 	background-position: bottom left;
