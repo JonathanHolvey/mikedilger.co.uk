@@ -234,6 +234,19 @@ ol {
 	#header .image.right {
 		background-position: left -4em top 0;
 	}
+	.image-block img[src^="images/banner"] {
+		width: 130%;
+		margin-left: -15%;
+		margin-right: -15%;
+	}
+}
+
+@media all and (max-width: 42em) {
+	.image-block img[src^="images/banner"] {
+		width: 160%;
+		margin-left: -30%;
+		margin-right: -30%;
+	}
 }
 
 @media all and (max-width: 35em) {
@@ -266,7 +279,8 @@ ol {
 		max-width: 100%;
 		width: 25em;
 	}
-	.image-block img:not(:first-child) {
+	.image-block img:not(:first-child),
+	.image-block img[src^="images/banner"] {
 		display: none;
 	}
 }
