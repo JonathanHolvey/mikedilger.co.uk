@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <?php
 	include_once "script/createUpdates.php";
@@ -24,10 +24,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_05.jpg');
+			background-image: url('images/banner_05.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_04.jpg');
+			background-image: url('images/banner_04.jpg');
 		}
 		#followLink {
 			color:#D16F24 !important;
@@ -40,7 +40,7 @@
 	<div id="content">
 		<div class="half left">
 			<div style="float:right"><a href=" <?php echo $xmlTweets["link"] ?> "><i>@DilgerTV</i> on twitter</a></div>
-			<div class="heading">my latest tweets</div>
+			<div class="heading">twitter</div>
 			<?php
 				$count = 0;
 				foreach ($xmlTweets as $tweet) {
@@ -54,7 +54,7 @@
 			
 			</div>
 		<div class="half right">
-			<div class="heading">events coming up</div>
+			<div class="heading">coming up</div>
 			<?php
 				$eventFound = false;
 				foreach ($xmlEvents as $event) {

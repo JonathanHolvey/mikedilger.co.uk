@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Mike Dilger - Background</title>
@@ -12,10 +12,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_15.jpg');
+			background-image: url('images/banner_15.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_03.jpg');
+			background-image: url('images/banner_03.jpg');
 		}
 		#backgroundLink {
 			color:#D16F24 !important;
@@ -36,6 +36,23 @@
 			<div class="subHeading">I am an incredibly experienced naturalist</div>
 			<p>I'm a passionate naturalist who has birded, botanized and entomologised in a huge range of countries, accumulating along the way an unparalleled expertise of British and South American wildlife. I also have a working knowledge of the nature of Vietnam, Tanzania and Arctic Canada.</p>
 			<p>I have recently trained to the level of PADI Rescue Diver and <!-- expirable content --> will be undertaking my HSE part 4 Qualification in 2012 to open up the potential of carrying out more underwater work in front of the cameras.</p>
+		</div>
+		<div class="half right">
+			<div class="image-block">		
+				<img src="images/photo_tawny.jpg" alt=""/>
+				<img src="images/banner_02.jpg" alt=""/>
+				<img src="images/banner_04.jpg" alt=""/>
+				<img src="images/banner_05.jpg" alt=""/>
+				<img src="images/banner_27.jpg" alt=""/>
+				<img src="images/banner_17.jpg" alt=""/>
+				<img src="images/photo_arctic.jpg" alt=""/>
+				<img src="images/banner_07.jpg" alt=""/>
+				<img src="images/banner_19.jpg" alt=""/>
+				<img src="images/banner_09.jpg" alt=""/>
+				<img src="images/banner_10.jpg" class="noSpace" alt=""/>
+			</div>
+		</div>
+		<div class="half left">
 			<div class="subHeading">I have become an experienced public speaker</div>
 			<p>I am a hugely accomplished and entertaining public speaker with experience of giving talks and lectures to both specialist groups and general audiences and am happy addressing anything from a small intimate audience to a packed theatre. In addition to a number of established talks I have recently acted as Master of Ceremonies at a number of events.</p>
 			<p>Any of these talks (listed below) can be booked by interested groups or parties through my agent.</p>
@@ -61,19 +78,6 @@
 			<p>I am a Patron of the Disabled Birders Association.<br/><a href="http://www.disabledbirdersassociation.co.uk">Disabled Birders Association website</a></p>
 			<p>I am a Patron of the Forest of Avon Trust.<br/><a href="http://www.forestofavon.org.uk">Forest of Avon Trust website</a></p>
 			<p>I'm also a big supporters of <a href="http://www.rspb.org.uk">The RSPB</a>, <a href="http://www.fauna-flora.org">Flora &amp; Fauna international</a>, <a href="http://www.dragonflysoc.org.uk/home.html">The British Dragonfly Society</a>, <a href="http://www.wwt.org.uk">The Wildfowl &amp; Wetland Trust</a> and <a href="http://www.rainforestconcern.org">Rainforest Concern</a>.</p>
-		</div>
-		<div class="half right">
-			<img src="images/photo_tawny.jpg" alt=""/>
-			<img src="images/banner_02.jpg" alt=""/>
-			<img src="images/banner_04.jpg" alt=""/>
-			<img src="images/banner_05.jpg" alt=""/>
-			<img src="images/banner_27.jpg" alt=""/>
-			<img src="images/banner_17.jpg" alt=""/>
-			<img src="images/photo_arctic.jpg" alt=""/>
-			<img src="images/banner_07.jpg" alt=""/>
-			<img src="images/banner_19.jpg" alt=""/>
-			<img src="images/banner_09.jpg" alt=""/>
-			<img src="images/banner_10.jpg" class="noSpace" alt=""/>
 		</div>
 	</div>
 	<?php include("footer.php"); ?>

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Mike Dilger - Broadcasting</title>
@@ -12,10 +12,10 @@
 	<?php include("resources.php"); ?>
 	<style type="text/css">
 		#header .image.left {
-			background:url('images/banner_19.jpg');
+			background-image: url('images/banner_19.jpg');
 		}
 		#header .image.right {
-			background:url('images/banner_22.jpg');
+			background-image: url('images/banner_22.jpg');
 		}
 		#broadcastingLink {
 			color:#D16F24 !important;
@@ -30,7 +30,18 @@
 			<p>Over the last ten years I have worked as on-screen talent across a whole raft of wildlife programmes, appearing anywhere from BBC1 to Channel 5 and BBC Radio 4 to CBeebies. My current work sees me appearing on a weekly basis as the wildlife reporter for both BBC1's The ONE Show and Inside Out.</p>
 			<p>In addition to an encyclopaedic knowledge of British flora and fauna, I have acquired an expertise of the ecosystems of South and Central America, East Africa and Southeast Asia as a result of extended work periods in these regions.</p>
 			<p>My mission is to reveal the beauty of the natural world to as broad an audience as possible through a combination of my trademark enthusiasm and immense knowledge. In addition to a range of broadcasting projects, I'm also available for both public speaking engagements and writing projects.</p>
-
+		</div>
+		<div class="half right">
+			<div class="image-block">
+				<img src="images/photo_onCamera.jpg" alt=""/>
+				<img src="images/banner_24.jpg" alt=""/>
+				<img src="images/banner_08.jpg" alt=""/>
+				<img src="images/banner_14.jpg" alt=""/>
+				<img src="images/banner_03.jpg" alt=""/>
+				<img src="images/banner_18.jpg" alt=""/>
+			</div>
+		</div>
+		<div class="half left">
 			<div class="heading">current presenting projects</div>
 			<div class="subHeading">Wildlife Reporter on <i>The ONE Show</i></div>
 			<p>BBC1 - from April 2008 to present</p>
@@ -40,14 +51,6 @@
 			<p>BBC1 - from 2004 to present</p>
 			<p>Inside Out is a long-standing regional magazine programme which highlights a variety of surprising stories from familiar places. I report on a vast range of wildlife reports for the programme for the BBC Bristol, Plymouth, London, Leeds, Norwich, Southampton and Nottingham regions. Projects undertaken have included following the epic journey of a hooded seal from Orkney to Spain, the first ever filmed birth of a baby black rhino in captivity and the unprecedented transport of 13 Romanian lions to their new home at the Yorkshire Wildlife Park in Doncaster.</p>
 			<a class="showMore">click here for past presenting projects</a>
-		</div>
-		<div class="half right">
-			<img src="images/photo_onCamera.jpg" alt=""/>
-			<img src="images/banner_24.jpg" alt=""/>
-			<img src="images/banner_08.jpg" alt=""/>
-			<img src="images/banner_14.jpg" alt=""/>
-			<img src="images/banner_03.jpg" alt=""/>
-			<img src="images/banner_18.jpg" class="noSpace" alt=""/>
 		</div>
 		<div class="more">
 			<div class="heading">past presenting projects</div>
