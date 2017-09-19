@@ -169,7 +169,6 @@ ol {
 }
 .half {
 	width: 50%;
-	padding: 0 2%;
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
@@ -179,11 +178,15 @@ ol {
 	border-right: 1px solid #D0D0D0;
 	left: 0.5px;
 	clear: left;
+	padding-left: 2em;
+	padding-right: 1em;
 }
 .half.right {
 	float: right;
 	border-left: 1px solid #D0D0D0;
 	right: 0.5px;
+	padding-right: 2em;
+	padding-left: 1em;
 }
 .image-block {
 	text-align: center;
@@ -227,6 +230,32 @@ ol {
 	border: 1px solid #D0D0D0;
 }
 
+@media all and (max-width: 57em) {
+	.third {
+		width: 40%;
+		box-sizing: border-box;
+	}
+	.third.right {
+		float: none;
+		clear: both;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		border-left: none;
+		min-height: 0;
+		padding-left: 0;
+	}
+	.third.left {
+		margin-left: 10%;
+	}
+	.playLink {
+		float: none;
+	}
+	.playLink + div {
+		display: none;
+	}
+}
+
 @media all and (max-width: 50em) {
 	#header .image.left {
 		background-position: right -4em top 0;
@@ -246,6 +275,25 @@ ol {
 		width: 160%;
 		margin-left: -30%;
 		margin-right: -30%;
+	}
+}
+
+@media all and (max-width: 38em) {
+	.third.left,
+	.third.middle,
+	.third.right {
+		float: none;
+		width: 100%;
+		border: none;
+		min-height: 0;
+		padding: 0;
+		margin: 0;
+		padding-left: 2em;
+		padding-right: 2em;
+		margin-bottom: 1em;
+	}
+	.third.middle {
+		text-align: center;
 	}
 }
 
@@ -274,6 +322,8 @@ ol {
 		border: none;
 		width: 100%;
 		margin-left: -0.1px;
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 	.image-block img {
 		max-width: 100%;
