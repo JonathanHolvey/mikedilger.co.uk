@@ -1,4 +1,4 @@
-<div id="footer"><a href="http://www.rocketchilli.com">Website by Rocket Chilli</a> &#8226; &copy; Copyright <?php echo date("Y"); ?> Mike Dilger &amp; Rocket Chilli - All rights reserved</div>
+<div id="footer"><a href="http://www.rocketchilli.com">Website by Rocket Chilli</a> &#8226; &copy; Copyright <?php echo date("Y"); ?> Mike Dilger - All rights reserved</div>
 <!-- google analytics tracking code -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

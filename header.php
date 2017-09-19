@@ -9,12 +9,12 @@
 	<div id="navBar">
 		<div>
 			<a href="index.php" id="homeLink">home</a>
+			<a href="updates.php" id="followLink">follow</a>
 			<a href="broadcasting.php" id="broadcastingLink">broadcasting</a>
-			<a href="writing.php" id="writingLink">writing</a>
 		</div>
 		<div>
+			<a href="writing.php" id="writingLink">writing</a>
 			<a href="background.php" id="backgroundLink">background</a>
-			<a href="updates.php" id="followLink">follow</a>
 			<a href="contact.php" id="contactLink">contact</a>
 		</div>
 	</div>
