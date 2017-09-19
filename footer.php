@@ -1,11 +1,10 @@
 <div id="footer"><a href="http://www.rocketchilli.com">Website by Rocket Chilli</a> &#8226; &copy; Copyright <?php echo date("Y"); ?> Mike Dilger - All rights reserved</div>
-<!-- google analytics tracking code -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15642521-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-15642521-1');
 </script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-15642521-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
