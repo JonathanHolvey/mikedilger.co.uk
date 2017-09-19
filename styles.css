@@ -72,8 +72,10 @@ ol {
 }
 #navBar {
 	margin-bottom: 1.25em;
+	margin-right: 0.9em;
+	margin-left: 0.9em;
 	text-align: center;
-	font-size: 112.5%;
+	font-size: 120%;
 	cursor: default;
 }
 #navBar a {
@@ -267,6 +269,9 @@ ol {
 		width: 130%;
 		margin-left: -15%;
 		margin-right: -15%;
+	}
+	#navBar {
+		font-size: 112%;
 	}
 }
 
