@@ -1,3 +1,5 @@
+DirectoryIndex index.php
+
 RewriteEngine On
 
 # Remove www subdomain
@@ -9,8 +11,16 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Forward old urls
-Redirect 301 /index.html http://mikedilger.co.uk/index.php
-Redirect 301 /background.html http://mikedilger.co.uk/background.php
-Redirect 301 /tvpresenting.html http://mikedilger.co.uk/broadcasting.php
-Redirect 301 /tvPresenting.php http://mikedilger.co.uk/broadcasting.php
-Redirect 301 /otherWork.php http://mikedilger.co.uk/writing.php
+RewriteRule ^index.html / [R=301,NC,L]
+RewriteRule ^background.html /background [R=301,NC,L]
+RewriteRule ^tvpresenting.html|tvPresenting.php /broadcasting [R=301,NC,L]
+RewriteRule ^otherWork.php /writing [R=301,NC,L]
+RewriteRule ^contact.html /contact [R=301,NC,L]
+RewriteRule ^updates.php /follow [R=301,NC,L]
+
+# Remove .php file extensions 
+RewriteCond %{THE_REQUEST} /(follow|broadcasting|writing|background|contact|showreel)\.php [NC]
+RewriteRule ^(.+)\.php$ /$1 [R=301,NC,L]
+
+# Serve clean page URLs
+RewriteRule ^(follow|broadcasting|writing|background|contact|showreel)$ $1.php [NC,L]

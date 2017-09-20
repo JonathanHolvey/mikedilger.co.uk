@@ -41,8 +41,8 @@
 			<h1>about me</h1>
 			<p>I am an ecologist, natural history presenter and writer. I have a life-long passion for British and tropical flora and fauna, of which I have profound experience and encyclopaedic knowledge.</p>
 			<p>I am committed to bringing the beauty of the natural world to a broader audience with enthusiasm and insight, rather than sensation or gimmicks.</p>
-			<div class="playLink"><a href="showreel.php">watch my showreel</a></div>
-			<div style="clear:both"><a href="updates.php">find out what I'm up to</a></div>
+			<div class="playLink"><a href="showreel">watch my showreel</a></div>
+			<div style="clear:both"><a href="updates">find out what I'm up to</a></div>
 		</div>
 		<div class="third middle">
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
@@ -64,7 +64,7 @@
 				if (!$eventFound)
 					echo "<div class=\"event\">(no upcoming events)</div>";
 			?>
-			<a href="updates.php">see more updates</a>
+			<a href="updates">see more updates</a>
 		</div>
 	</div>
 	<?php include("footer.php"); ?>

@@ -3,3 +3,4 @@
 <link rel="stylesheet" href="styles.css?v=3" type="text/css" />
 <script type="text/javascript" src="script/jquery.js"></script>
 <script type="text/javascript" src="script/common.js"></script>
+<base href="/">
