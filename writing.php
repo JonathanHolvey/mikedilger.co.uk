@@ -11,10 +11,10 @@
 
 	<?php include("resources.php"); ?>
 	<style type="text/css">
-		#header .image.left {
+		header .image.left {
 			background-image: url('images/banner_01.jpg');
 		}
-		#header .image.right {
+		header .image.right {
 			background-image: url('images/banner_13.jpg');
 		}
 		#writingLink {
@@ -25,25 +25,25 @@
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div id="content">
+	<div class="content">
 		<div class="half left">
-			<div class="heading">books</div>
-			<div class="subHeading">My Garden and Other Animals</div>
+			<h1>books</h1>
+			<h2>My Garden and Other Animals</h2>
 			<p>Look out for my latest book - <a href="https://www.amazon.co.uk/Mike-Dilger/e/B0034O9ASW">Order your copy on Amazon</a></p>
 			<p>Have you ever wondered what our birds get up to when they're not pinching our peanuts, pilfering our pyracantha berries or nesting under the eaves of our homes? Find out the answers in <i>Nightingales in November</i>.</p>
 			<div class="book"><a href="https://www.amazon.co.uk/Nightingales-November-Mike-Dilger"><img src="images/nightingalesInNovember.jpg" alt=""/></a></div>
-			<div class="subHeading">My Garden and Other Animals</div>
+			<h2>My Garden and Other Animals</h2>
 			<div class="book"><img src="images/myGarden.jpg" alt=""/></div>
-			<div class="subHeading">Nature's Top 40: Britain's Best Wildlife</div>
+			<h2>Nature's Top 40: Britain's Best Wildlife</h2>
 			<p>To accompany the TV series</p>
 			<p class="book"><img src="images/britainsBestWildlife.jpg" alt=""/></p>
-			<div class="subHeading">Nature's Calendar</div>
+			<h2>Nature's Calendar</h2>
 			<p>To accompany the BBC TV series</p>
 			<div class="book"><img src="images/naturesCalendar.jpg" alt=""/></div>
-			<div class="subHeading">Nature's Babies</div>
+			<h2>Nature's Babies</h2>
 			<p>A fun and informative look at the immense variety of young animals the natural world has to offer</p>
 			<p class="book"><img src="images/naturesBabies.jpg" alt=""/></p>
-			<div class="heading">articles</div>
+			<h1>articles</h1>
 			<ul>
 				<li>Occasional articles for the WWT Waterlife, BBC wildlife and BBC Countryfile magazines</li>
 				<li>A monthly e-zine article for CJ Wildbird foods between 2008 and 2009</li>

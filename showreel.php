@@ -11,17 +11,17 @@
 
 	<?php include("resources.php"); ?>
 	<style type="text/css">
-		#header .image.left {
+		header .image.left {
 			background-image: url('images/banner_12.jpg');
 		}
-		#header .image.right {
+		header .image.right {
 			background-image: url('images/banner_24.jpg');
 		}
 	</style>
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div id="content" style="height:478px">
+	<div class="content" style="height:478px">
 		<iframe style="width:800px;height:475px;margin:0 25px" src="https://www.youtube.com/embed/kmQrAsXBRV4?rel=0&amp;autoplay=1" frameborder="0"></iframe>
 	</div>
 	<?php include("footer.php"); ?>

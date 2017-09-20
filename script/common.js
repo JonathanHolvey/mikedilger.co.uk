@@ -27,7 +27,7 @@ $(document).ready(function() {
 				});
 			});
 			// for header backgrounds
-			$("#header .image").each(function() {
+			$("header .image").each(function() {
 				var img = this;
 				var back = $(img).css("backgroundImage");
 				var src = back.substring(back.indexOf("/images/") + 8).replace("\")","").replace(")","");

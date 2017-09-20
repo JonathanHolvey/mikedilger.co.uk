@@ -11,10 +11,10 @@
 
 	<?php include("resources.php"); ?>
 	<style type="text/css">
-		#header .image.left {
+		header .image.left {
 			background-image: url('images/banner_15.jpg');
 		}
-		#header .image.right {
+		header .image.right {
 			background-image: url('images/banner_03.jpg');
 		}
 		#backgroundLink {
@@ -25,15 +25,15 @@
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div id="content">
+	<div class="content">
 		<div class="half left">
-			<div class="heading">background</div>
-			<div class="subHeading">I consider myself an incredibly experienced and relaxed presenter</div>
+			<h1>background</h1>
+			<h2>I consider myself an incredibly experienced and relaxed presenter</h2>
 			<p>Having spent a substantial time behind the camera, I fully appreciate the team ethic behind making TV and radio programmes and am always well prepared, willing to work incredibly hard and happy to muck in.</p>
 			<p>Having spent long periods abroad in remote locations, I am pretty resilient, exceptionally experienced and happy to work, in the words of the  Martini advert, &quot;anytime, anyplace anywhere!&quot;</p>
-			<div class="subHeading">I speak fluent Spanish and have a basic understanding of Swahili and Vietnamese</div>
+			<h2>I speak fluent Spanish and have a basic understanding of Swahili and Vietnamese</h2>
 			<p>On the rare occasions where gaps permit in my presenting schedule I also work as a director and camera assistant. In 2007, for example, I spent over two months working as a Director in Arctic Canada for the BBC Natural History Unit on the Natural World film <i>White Falcon, White Wolf</i>.</p>
-			<div class="subHeading">I am an incredibly experienced naturalist</div>
+			<h2>I am an incredibly experienced naturalist</h2>
 			<p>I'm a passionate naturalist who has birded, botanized and entomologised in a huge range of countries, accumulating along the way an unparalleled expertise of British and South American wildlife. I also have a working knowledge of the nature of Vietnam, Tanzania and Arctic Canada.</p>
 			<p>I have recently trained to the level of PADI Rescue Diver and <!-- expirable content --> will be undertaking my HSE part 4 Qualification in 2012 to open up the potential of carrying out more underwater work in front of the cameras.</p>
 		</div>
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="half left">
-			<div class="subHeading">I have become an experienced public speaker</div>
+			<h2>I have become an experienced public speaker</h2>
 			<p>I am a hugely accomplished and entertaining public speaker with experience of giving talks and lectures to both specialist groups and general audiences and am happy addressing anything from a small intimate audience to a packed theatre. In addition to a number of established talks I have recently acted as Master of Ceremonies at a number of events.</p>
 			<p>Any of these talks (listed below) can be booked by interested groups or parties through my agent.</p>
 			<ul>
@@ -63,7 +63,7 @@
 				<li><i>Birds on the Beeb</i> is a trip down memory lane of some of my favourite birding moments over the last 10 years.</li>
 				<li><i>Mike Dilger Shows You How to Fly</i> is a lesson in defying gravity!</li>
 			</ul>
-			<div class="heading">lesser known facts about me</div>
+			<h1>lesser known facts about me</h1>
 			<!--<p>I briefly held the Guinness World Record for &quot;The Most Snails on the Face in One Minute&quot;. At 37, the record was claimed in Covent Garden on the set of The One Show in 2009, before being beaten later that year.</p>
 			<p>At the Rutland Birdfair I beat all other wildlife presenters to become Wild Brain of Britain 2010 and held onto the trophy at the Birdfair in 2011 – can I make it three years in a row!?</p>
 			<p>Whilst confining my activity to weight-lifting, jogging and golf, I adore watching all sport. My support for Manchester United tends to be from the comfort of an armchair, I am however a sucker for punishment in the form of a Bristol City season ticket!</p>-->
@@ -71,7 +71,7 @@
 			<p>I briefly held the Guinness World Record for "The Most Snails on the Face in One Minute". At 37, the record was claimed in Covent Garden on the set of The One Show in 2009, before being beaten later that year.</p>
 			<p>At the Rutland Birdfair I beat all other wildlife presenters to become Wild Brain of Britain 2010 and 2011.</p>
 			<p>I was in a team of Celebrity Eggheads, which beat the 'real Eggheads' in 2011 and featured for the University of Nottingham on <i>Celebrity University Challenge</i> in 2013.</p>
-			<div class="heading">charities</div>
+			<h1>charities</h1>
 			<p>I have just been delighted to accept patronage of the charity Froglife</p>
 			<p>I am Vice President of Butterfly Conservation.<br/><a href="http://www.butterfly-conservation.org">Butterfly Conservation website</a></p>
 			<p>I am a Patron of the Essex Badger Protection Group.<br/><a href="http://www.badgerland.co.uk/badgergroups/southeast/essexbadgerprotectiongroup.html">Badger Protection website</a></p>

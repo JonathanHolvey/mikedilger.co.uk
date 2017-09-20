@@ -22,10 +22,10 @@
 
 	<?php include("resources.php"); ?>
 	<style type="text/css">
-		#header .image.left {
+		header .image.left {
 			background-image :url('images/banner_02.jpg');
 		}
-		#header .image.right {
+		header .image.right {
 			background-image :url('images/banner_11.jpg');
 		}
 		#homeLink {
@@ -36,9 +36,9 @@
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div id="content">
+	<div class="content">
 		<div class="third left">
-			<div class="heading">about me</div>
+			<h1>about me</h1>
 			<p>I am an ecologist, natural history presenter and writer. I have a life-long passion for British and tropical flora and fauna, of which I have profound experience and encyclopaedic knowledge.</p>
 			<p>I am committed to bringing the beauty of the natural world to a broader audience with enthusiasm and insight, rather than sensation or gimmicks.</p>
 			<div class="playLink"><a href="showreel.php">watch my showreel</a></div>
@@ -48,10 +48,10 @@
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
 		</div>
 		<div class="third right">
-			<div class="heading">twitter</div>
+			<h1>twitter</h1>
 			<?php echo createTweet($xmlTweets -> tweet[0]); ?>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
-			<div class="heading">coming up</div>
+			<h1>coming up</h1>
 			<?php
 				$eventFound = false;
 				foreach ($xmlEvents as $event) {

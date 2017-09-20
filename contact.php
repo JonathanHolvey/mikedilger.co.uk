@@ -11,10 +11,10 @@
 
 	<?php include("resources.php"); ?>
 	<style type="text/css">
-		#header .image.left {
+		header .image.left {
 			background-image: url('images/banner_21.jpg');
 		}
-		#header .image.right {
+		header .image.right {
 			background-image: url('images/banner_14.jpg');
 		}
 		#contactLink {
@@ -25,11 +25,11 @@
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div id="content">
+	<div class="content">
 		<div class="half left">
 			<p>I am represented by Hilary Knight Management Ltd.</p>
 			<p>Please contact her if you would like a showreel DVD, details of my availability, would like to book me for a talk or have any other queries.</p>
-			<div class="heading">here's how...</div>
+			<h1>here's how...</h1>
 			<p>Phone: +44 (0)1604 781 818<br/>Mobile: +44 (0)7951 968 708</p>
 			<p>Email: <a href="mailto:hilary@hkmanagement.co.uk">hilary@hkmanagement.co.uk</a></p>
 			<p>Address:<br/>

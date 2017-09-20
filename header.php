@@ -1,12 +1,10 @@
-<div id="header">
+<header>
 	<div class="banner">
 		<div class="image left"></div>
 		<div class="image right"></div>
-	</div>
-	<div id="logo">
-		<a href="index.php"><img src="images/logo.png" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>	
-	</div>
-	<div id="navBar">
+	</div>	
+	<a class="logo" href="index.php"><img src="images/logo.png" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>		
+	<nav>
 		<div>
 			<a href="index.php" id="homeLink">home</a>
 			<a href="updates.php" id="followLink">follow</a>
@@ -17,5 +15,5 @@
 			<a href="background.php" id="backgroundLink">background</a>
 			<a href="contact.php" id="contactLink">contact</a>
 		</div>
-	</div>
-</div>
+	</nav>
+</header>

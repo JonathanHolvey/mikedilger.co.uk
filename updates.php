@@ -23,10 +23,10 @@
 
 	<?php include("resources.php"); ?>
 	<style type="text/css">
-		#header .image.left {
+		header .image.left {
 			background-image: url('images/banner_05.jpg');
 		}
-		#header .image.right {
+		header .image.right {
 			background-image: url('images/banner_04.jpg');
 		}
 		#followLink {
@@ -37,10 +37,10 @@
 </head>
 <body>
 	<?php include("header.php"); ?>
-	<div id="content">
+	<div class="content">
 		<div class="half left">
 			<div style="float:right"><a href=" <?php echo $xmlTweets["link"] ?> "><i>@DilgerTV</i> on twitter</a></div>
-			<div class="heading">twitter</div>
+			<h1>twitter</h1>
 			<?php
 				$count = 0;
 				foreach ($xmlTweets as $tweet) {
@@ -54,7 +54,7 @@
 			
 			</div>
 		<div class="half right">
-			<div class="heading">coming up</div>
+			<h1>coming up</h1>
 			<?php
 				$eventFound = false;
 				foreach ($xmlEvents as $event) {
@@ -66,7 +66,7 @@
 				if (!$eventFound)
 					echo "<div class=\"event\">(no upcoming events)</div>";
 			?>
-			<div class="heading">past events</div>
+			<h1>past events</h1>
 			<?php
 				$events = 0;
 				foreach ($xmlEvents as $event) {

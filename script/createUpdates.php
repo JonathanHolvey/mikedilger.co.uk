@@ -29,12 +29,12 @@
 	
 	// create tweet entry from simple xml element
 	function createTweet($tweet) {
-		return "<div class=\"tweet\"><div class=\"title\">" . createLinks(htmlspecialchars($tweet -> title)) . "</div><div class=\"time\"><a href=\"" . $tweet -> link . "\" title=\"View on twitter.com\">" . date("l j F Y", (int)$tweet["time"]) . " (" . getAge($tweet["time"]) . " ago)</a></div></div>";
+		return "<div class=\"tweet\"><h2>" . createLinks(htmlspecialchars($tweet -> title)) . "</h2><div class=\"time\"><a href=\"" . $tweet -> link . "\" title=\"View on twitter.com\">" . date("l j F Y", (int)$tweet["time"]) . " (" . getAge($tweet["time"]) . " ago)</a></div></div>";
 	}
 	// create event entry from simple xml element
 	function createEvent($event) {
 		$location = $event->location != ""? "<div class=\"location\">Location: " . htmlspecialchars($event -> location) . "</div>": "";
-		return "<div class=\"event\"><div class=\"title\">" . htmlspecialchars($event -> title) . "</div><div class=\"time\">" . getDateRange((int)$event["startTime"], (int)$event["endTime"]) . "</div>" . $location . "<div class=\"description\">" . htmlspecialchars($event -> description) . "</div></div>";
+		return "<div class=\"event\"><h2>" . htmlspecialchars($event -> title) . "</h2><div class=\"time\">" . getDateRange((int)$event["startTime"], (int)$event["endTime"]) . "</div>" . $location . "<div class=\"description\">" . htmlspecialchars($event -> description) . "</div></div>";
 	}
 	
 	// replace url with anchor, and twitter tags with search links
