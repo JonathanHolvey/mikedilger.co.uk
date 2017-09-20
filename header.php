@@ -3,7 +3,7 @@
 		<div class="image left"></div>
 		<div class="image right"></div>
 	</div>	
-	<a class="logo" href="index.php"><img src="images/logo.png" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>		
+	<a class="logo" href="index.php"><img src="images/logo.svg" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>		
 	<nav>
 		<div>
 			<a href="index.php" id="homeLink">home</a>
