@@ -25,6 +25,9 @@ RewriteRule ^(.+)\.php$ /$1 [R=301,NC,L]
 # Serve clean page URLs
 RewriteRule ^(follow|broadcasting|writing|background|contact|showreel)$ $1.php [NC,L]
 
+# Serve minified SCSS files from SCSSPHP compiler
+RewriteRule ^styles/([^/]+\.scss) /styles/scss.php?p=$1&min [NC,L]
+
 <IfModule mod_headers.c>
 	# Cache static assets for one year
 	<filesMatch ".(jpg|jpeg|png|gif|ico|svg)$">
