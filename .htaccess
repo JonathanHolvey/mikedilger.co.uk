@@ -24,3 +24,18 @@ RewriteRule ^(.+)\.php$ /$1 [R=301,NC,L]
 
 # Serve clean page URLs
 RewriteRule ^(follow|broadcasting|writing|background|contact|showreel)$ $1.php [NC,L]
+
+<IfModule mod_headers.c>
+	# Cache static assets for one year
+	<filesMatch ".(jpg|jpeg|png|gif|ico|svg)$">
+		Header set Cache-Control "max-age=31536000, public"
+	</filesMatch>
+	# Cache CSS and JavaScript for one week
+	<filesMatch ".(css|js)$">
+		Header set Cache-Control "max-age=604800, public"
+	</filesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript image/svg+xml
+</IfModule>
