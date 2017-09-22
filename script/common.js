@@ -48,4 +48,27 @@ $(document).ready(function() {
 		var offset = $(".more").offset();
 		scrollTo(offset.left,offset.top);
 	});
+
+	// make embedded youtube videos responsive
+	var $videos = $("iframe[src*='//www.youtube.com']"),
+	$container = $(".content");
+	$videos.each(function() {
+		$(this)
+			.data("aspectRatio", $(this).height() / $(this).width())
+			// remove hard coded width and height
+			.removeAttr("height")
+			.removeAttr("width");
+		console.log($(this).width);
+	});
+
+	$(window).resize(function() {
+		// resize all videos according to their aspect ratio
+		 $videos.each(function() {
+			var width = $container.width() - $(this).outerWidth(true) + $(this).width();
+			var $el = $(this);
+			$el
+				.width(width)
+				.height(width * $el.data("aspectRatio"));
+		});
+	}).resize();
 });
