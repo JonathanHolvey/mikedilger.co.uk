@@ -25,5 +25,6 @@
 		<iframe style="width:800px;height:475px;margin:0 25px" src="https://www.youtube.com/embed/kmQrAsXBRV4?rel=0&amp;autoplay=1" frameborder="0"></iframe>
 	</div>
 	<?php include("footer.php"); ?>
+	<?php include("defer.php"); ?>
 </body>
 </html>

@@ -81,5 +81,6 @@
 		</div>
 	</div>
 	<?php include("footer.php"); ?>
+	<?php include("defer.php"); ?>
 </body>
 </html>
