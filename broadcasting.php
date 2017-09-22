@@ -9,7 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="Jonathan Holvey" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image: url('images/banner_19.jpg');
@@ -24,7 +24,7 @@
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
 			<p>Over the last ten years I have worked as on-screen talent across a whole raft of wildlife programmes, appearing anywhere from BBC1 to Channel 5 and BBC Radio 4 to CBeebies. My current work sees me appearing on a weekly basis as the wildlife reporter for both BBC1's The ONE Show and Inside Out.</p>
@@ -122,7 +122,7 @@
 			<p>This 50 minute documentary was my first foray into presenting and is the story of Britain's wild invaders - alien plants and animals that have integrated with our own native wildlife. I uncover wildlife that, whilst often exotic and sometimes familiar, is always surprising and reveal both how they arrived here and how they've settled in.</p>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
-	<?php include("defer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>

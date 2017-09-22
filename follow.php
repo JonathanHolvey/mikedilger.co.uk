@@ -21,7 +21,7 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="Jonathan Holvey" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image: url('images/banner_05.jpg');
@@ -36,7 +36,7 @@
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
 			<div style="float:right"><a href=" <?php echo $xmlTweets["link"] ?> "><i>@DilgerTV</i> on twitter</a></div>
@@ -85,7 +85,7 @@
 			?>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
-	<?php include("defer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>

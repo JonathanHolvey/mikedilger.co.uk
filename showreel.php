@@ -9,7 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="Jonathan Holvey" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image: url('images/banner_12.jpg');
@@ -20,11 +20,11 @@
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content" style="height:478px">
 		<iframe style="width:800px;height:475px;margin:0 25px" src="https://www.youtube.com/embed/kmQrAsXBRV4?rel=0&amp;autoplay=1" frameborder="0"></iframe>
 	</div>
-	<?php include("footer.php"); ?>
-	<?php include("defer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>

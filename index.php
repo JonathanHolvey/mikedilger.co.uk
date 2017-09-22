@@ -20,7 +20,7 @@
 	<meta name="author" content="Jonathan Holvey" />
 	<meta name="google-site-verification" content="9SDLuvd4cL9pf6-MXQ4DQT6UUCRVAXtqKM2vlhPlZss" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image :url('images/banner_02.jpg');
@@ -35,7 +35,7 @@
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="third left">
 			<h1>about me</h1>
@@ -67,7 +67,7 @@
 			<a href="updates">see more updates</a>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
-	<?php include("defer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>

@@ -219,7 +219,7 @@ footer a {
 	height: 1.875em;
 	display: block;
 	background-color: #D16F24;
-	background-image: url("images/play.svg");
+	background-image: url("/images/play.svg");
 	background-size: 0.8em;
 	background-repeat: no-repeat;
 	background-position: 0.7em center;

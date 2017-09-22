@@ -9,7 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="Jonathan Holvey" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image: url('images/banner_15.jpg');
@@ -24,7 +24,7 @@
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
 			<h1>background</h1>
@@ -80,7 +80,7 @@
 			<p>I'm also a big supporters of <a href="http://www.rspb.org.uk">The RSPB</a>, <a href="http://www.fauna-flora.org">Flora &amp; Fauna international</a>, <a href="http://www.dragonflysoc.org.uk/home.html">The British Dragonfly Society</a>, <a href="http://www.wwt.org.uk">The Wildfowl &amp; Wetland Trust</a> and <a href="http://www.rainforestconcern.org">Rainforest Concern</a>.</p>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
-	<?php include("defer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>
