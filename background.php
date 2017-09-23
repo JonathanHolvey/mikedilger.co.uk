@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Mike Dilger - Background</title>
+	<title>Background - Mike Dilger</title>
 	<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="copyright" content="" />
 	<meta name="content-Language" content="english" /> 
