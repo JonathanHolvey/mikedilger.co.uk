@@ -64,7 +64,7 @@
 				if (!$eventFound)
 					echo "<div class=\"event\">(no upcoming events)</div>";
 			?>
-			<a href="updates">see more updates</a>
+			<a href="follow">see more updates</a>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>
