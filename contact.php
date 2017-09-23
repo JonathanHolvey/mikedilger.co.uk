@@ -9,7 +9,7 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="Jonathan Holvey" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image: url('images/banner_21.jpg');
@@ -17,14 +17,14 @@
 		header .image.right {
 			background-image: url('images/banner_14.jpg');
 		}
-		#contactLink {
+		#contact-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
 			<p>I am represented by Hilary Knight Management Ltd.</p>
@@ -47,6 +47,7 @@
 			</div>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>

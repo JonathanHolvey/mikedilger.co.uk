@@ -20,7 +20,7 @@
 	<meta name="author" content="Jonathan Holvey" />
 	<meta name="google-site-verification" content="9SDLuvd4cL9pf6-MXQ4DQT6UUCRVAXtqKM2vlhPlZss" />
 
-	<?php include("resources.php"); ?>
+	<?php include("templates/resources.php"); ?>
 	<style type="text/css">
 		header .image.left {
 			background-image :url('images/banner_02.jpg');
@@ -28,20 +28,20 @@
 		header .image.right {
 			background-image :url('images/banner_11.jpg');
 		}
-		#homeLink {
+		#home-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}
 	</style>
 </head>
 <body>
-	<?php include("header.php"); ?>
+	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="third left">
 			<h1>about me</h1>
 			<p>I am an ecologist, natural history presenter and writer. I have a life-long passion for British and tropical flora and fauna, of which I have profound experience and encyclopaedic knowledge.</p>
 			<p>I am committed to bringing the beauty of the natural world to a broader audience with enthusiasm and insight, rather than sensation or gimmicks.</p>
-			<div class="playLink"><a href="showreel">watch my showreel</a></div>
+			<div class="play-link"><a href="showreel">watch my showreel</a></div>
 			<div style="clear:both"><a href="updates">find out what I'm up to</a></div>
 		</div>
 		<div class="third middle">
@@ -67,6 +67,7 @@
 			<a href="updates">see more updates</a>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
+	<?php include("templates/footer.php"); ?>
+	<?php include("templates/defer.php"); ?>
 </body>
 </html>

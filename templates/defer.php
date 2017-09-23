@@ -1,4 +1,6 @@
-<footer><a href="http://www.rocketchilli.com">Website by Rocket Chilli</a> &#8226; &copy; Copyright <?php echo date("Y"); ?> Mike Dilger - All rights reserved</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="script/main.js"></script>
+
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15642521-1"></script>
 <script>

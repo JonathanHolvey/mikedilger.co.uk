@@ -1,10 +1,12 @@
-/* Colour palette
-	green: 			C3C65D
-	blue: 			33619E
-	dark grey: 		403C3E
-	light orange: 	FFB630
-	dark orange: 	D16F24	
-*/
+/* Colour palette */
+$green: #c3c65d;
+$blue: #33619e;
+$light-grey: #d0d0d0;
+$dark-grey: #808080;
+$light-orange: #ffb630;
+$dark-orange: #d16f24;
+
+@import "reset";
 
 body,
 html {
@@ -15,7 +17,7 @@ body {
 	font-family: "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
-	color: gray;
+	color: $dark-grey;
 	min-width: 22.5em;
 }
 html {
@@ -23,15 +25,15 @@ html {
 }
 a {
 	text-decoration: none;
-	color: #D16F24;
+	color: $dark-orange;
 	cursor: pointer;
 }
 a:hover,
-.playLink:hover a {
-	color: #FFB630 !important;
+.play-link:hover a {
+	color: $light-orange;
 }
 p {
-	margin: 0 0 0.625em 0;
+	margin: 0 0 0.625em;
 }
 ul,
 ol {
@@ -46,7 +48,7 @@ header .banner {
 	margin-bottom: 2.5em;
 }
 header .image {
-	background-repeat: no-repeat !important;
+	background-repeat: no-repeat;
 	float: left;
 	width: 50%;
 	height: 100%;
@@ -80,7 +82,7 @@ nav {
 	cursor: default;
 }
 nav a {
-	color: #D0D0D0;
+	color: $light-grey;
 	display: inline-block;
 	margin: 0 0.45em;
 }
@@ -100,7 +102,7 @@ nav div {
 }
 h2 {
 	font-size: 120%;
-	color: #C3C65D;
+	color: $green;
 	line-height: 1.146em;
 	font-weight: normal;
 	margin-top: 0;
@@ -123,22 +125,22 @@ h2 {
 	margin-left: 0.175em;
 }
 .tweet h2 a {
-	color: #FFB630;
+	color: $light-orange;
 }
 .tweet .time,
 .event .description,
 .event .location,
 .event .time {
 	font-size: 80%;
-	color: gray;
+	color: $dark-grey;
 	line-height: 1.328em;
 	margin-top: 0.3125em;
 }
 .tweet .time a {
-	color: gray;
+	color: $dark-grey;
 }
 h1 {
-	color: #33619E;
+	color: $blue;
 	font-size: 130%;
 	font-weight: bold;
 	margin-top: 0;
@@ -149,12 +151,12 @@ footer {
 	width: 100%;
 	max-width: 53.75em;
 	margin: 0.625em auto;
-	color: #D0D0D0;
+	color: $light-grey;
 	text-align: center;
 	font-size: 80%;
 }
 footer a {
-	color: #D0D0D0;
+	color: $light-grey;
 }
 .third {
 	width: 16.25em;
@@ -162,12 +164,12 @@ footer a {
 	min-height: 24.375em;
 }
 .third.left {
-	border-right: 1px solid #D0D0D0;
+	border-right: 1px solid $light-grey;
 	padding-right: 1.1875em;
 	margin-right: 1.25em;
 }
 .third.right {
-	border-left: 1px solid #D0D0D0;
+	border-left: 1px solid $light-grey;
 	padding-left: 1.1875em;
 	margin-left: 1.25em;
 }
@@ -179,7 +181,7 @@ footer a {
 }
 .half.left {
 	float: left;
-	border-right: 1px solid #D0D0D0;
+	border-right: 1px solid $light-grey;
 	left: 0.5px;
 	clear: left;
 	padding-left: 2em;
@@ -187,7 +189,7 @@ footer a {
 }
 .half.right {
 	float: right;
-	border-left: 1px solid #D0D0D0;
+	border-left: 1px solid $light-grey;
 	right: 0.5px;
 	padding-right: 2em;
 	padding-left: 1em;
@@ -199,27 +201,27 @@ footer a {
 .image-block img {
 	display: inline-block;
 	width: 100%;
-	margin: 0 auto 0.625em auto;
+	margin: 0 auto 0.625em;
 }
 .image-block img:last-child {
 	margin-bottom: 0;
 }
-.playLink {
+.play-link {
 	white-space: nowrap;
 	cursor: pointer;
 	margin-bottom: 0.625em;
 	line-height: 1.875em;
 	vertical-align: baseline;
-	padding-left: 2.275em;	
+	padding-left: 2.275em;
 	position: relative;
 }
-.playLink::before {
+.play-link::before {
 	content: "";
 	width: 1.875em;
 	height: 1.875em;
 	display: block;
-	background-color: #D16F24;
-	background-image: url("images/play.svg");
+	background-color: $dark-orange;
+	background-image: url("/images/play.svg");
 	background-size: 0.8em;
 	background-repeat: no-repeat;
 	background-position: 0.7em center;
@@ -229,10 +231,10 @@ footer a {
 	top: 0;
 	left: 0;
 }
-.playLink:hover::before {
-	background-color: #FFB630;
+.play-link:hover::before {
+	background-color: $light-orange;
 }
-.playLink:hover {
+.play-link:hover {
 	background-position: bottom left;
 }
 .more {
@@ -242,12 +244,12 @@ footer a {
 	clear: both;
 }
 .book {
-	text-align: center !important;
+	text-align: center;
 	margin-top: 0.625em;
 }
 .book img {
 	max-width: 9.375em;
-	border: 1px solid #D0D0D0;
+	border: 1px solid $light-grey;
 }
 
 @media all and (max-width: 57em) {
@@ -261,17 +263,17 @@ footer a {
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
-		border-left: none;
+		border-left: 0;
 		min-height: 0;
 		padding-left: 0;
 	}
 	.third.left {
 		margin-left: 10%;
 	}
-	.playLink {
+	.play-link {
 		float: none;
 	}
-	.playLink + div {
+	.play-link + div {
 		display: none;
 	}
 }
@@ -283,7 +285,7 @@ footer a {
 	header .image.right {
 		background-position: left -4em top 0;
 	}
-	.image-block img[src^="images/banner"] {
+	.image-block [src^="images/banner"] {
 		width: 130%;
 		margin-left: -15%;
 		margin-right: -15%;
@@ -294,7 +296,7 @@ footer a {
 }
 
 @media all and (max-width: 42em) {
-	.image-block img[src^="images/banner"] {
+	.image-block [src^="images/banner"] {
 		width: 160%;
 		margin-left: -30%;
 		margin-right: -30%;
@@ -307,7 +309,7 @@ footer a {
 	.third.right {
 		float: none;
 		width: 100%;
-		border: none;
+		border: 0;
 		min-height: 0;
 		padding: 0;
 		margin: 0;
@@ -340,9 +342,10 @@ footer a {
 	nav a {
 		margin: 0 0.3em;
 	}
-	.half.left, .half.right {
+	.half.left,
+	.half.right {
 		float: none;
-		border: none;
+		border: 0;
 		width: 100%;
 		margin-left: -0.1px;
 		padding-left: 2em;
@@ -353,14 +356,14 @@ footer a {
 		width: 25em;
 	}
 	.image-block img:not(:first-child),
-	.image-block img[src^="images/banner"] {
+	.image-block [src^="images/banner"] {
 		display: none;
 	}
 }
 
 @media all and (max-width: 28em) {
 	body {
-		font-size: 14px
+		font-size: 14px;
 	}
 	header .banner {
 		height: 9em;
