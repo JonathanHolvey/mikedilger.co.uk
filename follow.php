@@ -29,7 +29,7 @@
 		header .image.right {
 			background-image: url('images/banner_04.jpg');
 		}
-		#followLink {
+		#follow-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}

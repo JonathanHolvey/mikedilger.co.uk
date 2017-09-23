@@ -29,7 +29,7 @@ a {
 	cursor: pointer;
 }
 a:hover,
-.playLink:hover a {
+.play-link:hover a {
 	color: $light-orange;
 }
 p {
@@ -206,7 +206,7 @@ footer a {
 .image-block img:last-child {
 	margin-bottom: 0;
 }
-.playLink {
+.play-link {
 	white-space: nowrap;
 	cursor: pointer;
 	margin-bottom: 0.625em;
@@ -215,7 +215,7 @@ footer a {
 	padding-left: 2.275em;
 	position: relative;
 }
-.playLink::before {
+.play-link::before {
 	content: "";
 	width: 1.875em;
 	height: 1.875em;
@@ -231,10 +231,10 @@ footer a {
 	top: 0;
 	left: 0;
 }
-.playLink:hover::before {
+.play-link:hover::before {
 	background-color: $light-orange;
 }
-.playLink:hover {
+.play-link:hover {
 	background-position: bottom left;
 }
 .more {
@@ -270,10 +270,10 @@ footer a {
 	.third.left {
 		margin-left: 10%;
 	}
-	.playLink {
+	.play-link {
 		float: none;
 	}
-	.playLink + div {
+	.play-link + div {
 		display: none;
 	}
 }

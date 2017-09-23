@@ -17,7 +17,7 @@
 		header .image.right {
 			background-image: url('images/banner_03.jpg');
 		}
-		#backgroundLink {
+		#background-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}

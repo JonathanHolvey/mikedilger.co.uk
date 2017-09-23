@@ -17,7 +17,7 @@
 		header .image.right {
 			background-image: url('images/banner_22.jpg');
 		}
-		#broadcastingLink {
+		#broadcasting-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}

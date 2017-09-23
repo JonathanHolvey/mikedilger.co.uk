@@ -17,7 +17,7 @@
 		header .image.right {
 			background-image: url('images/banner_13.jpg');
 		}
-		#writingLink {
+		#writing-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}

@@ -17,7 +17,7 @@
 		header .image.right {
 			background-image: url('images/banner_14.jpg');
 		}
-		#contactLink {
+		#contact-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}

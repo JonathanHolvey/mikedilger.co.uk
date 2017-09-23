@@ -28,7 +28,7 @@
 		header .image.right {
 			background-image :url('images/banner_11.jpg');
 		}
-		#homeLink {
+		#home-link {
 			color:#D16F24 !important;
 			cursor:default;
 		}
@@ -41,7 +41,7 @@
 			<h1>about me</h1>
 			<p>I am an ecologist, natural history presenter and writer. I have a life-long passion for British and tropical flora and fauna, of which I have profound experience and encyclopaedic knowledge.</p>
 			<p>I am committed to bringing the beauty of the natural world to a broader audience with enthusiasm and insight, rather than sensation or gimmicks.</p>
-			<div class="playLink"><a href="showreel">watch my showreel</a></div>
+			<div class="play-link"><a href="showreel">watch my showreel</a></div>
 			<div style="clear:both"><a href="updates">find out what I'm up to</a></div>
 		</div>
 		<div class="third middle">
