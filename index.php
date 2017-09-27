@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-	include_once "script/createUpdates.php";
-	$xmlTweets = simplexml_load_file("tweets.xml");
-	$xmlEvents = simplexml_load_file("events.xml");
-	date_default_timezone_set("Europe/London");		
-?>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Mike Dilger</title>
@@ -49,21 +41,13 @@
 		</div>
 		<div class="third right">
 			<h1>twitter</h1>
-			<?php echo createTweet($xmlTweets -> tweet[0]); ?>
+			<?php
+				$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
+				$tweets = array_slice($tweetCache["tweets"], 0, 1);
+				include("templates/tweets.php");
+			?>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
 			<h1>coming up</h1>
-			<?php
-				$eventFound = false;
-				foreach ($xmlEvents as $event) {
-					if ($event["endTime"] > time()) {
-						echo createEvent($event);
-						$eventFound = true;
-						break;
-					}
-				}
-				if (!$eventFound)
-					echo "<div class=\"event\">(no upcoming events)</div>";
-			?>
 			<a href="follow">see more updates</a>
 		</div>
 	</div>

@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 
 <?php
-	include_once "script/createUpdates.php";
-	$xmlTweets = simplexml_load_file("tweets.xml");
-	$xmlEvents = simplexml_load_file("events.xml");
-	date_default_timezone_set("Europe/London");
-	
-	$maxTweets = 6;
 	$maxPastEvents = 7;
 	$inFuture = 60 * 60 * 24 * 90; // number of seconds in the future to include events for
 ?>
@@ -39,50 +33,18 @@
 	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
-			<div style="float:right"><a href=" <?php echo $xmlTweets["link"] ?> "><i>@DilgerTV</i> on twitter</a></div>
+			<div style="float:right"><a href="https://twitter.com/DilgerTV"><i>@DilgerTV</i> on twitter</a></div>
 			<h1>twitter</h1>
-			<?php
-				$count = 0;
-				foreach ($xmlTweets as $tweet) {
-					echo createTweet($tweet);
-					$count ++;
-					if ($count == $maxTweets)
-						break;
-				}
+			<?php 
+				$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
+				$tweets = array_slice($tweetCache["tweets"], 0, 6);
+				include("templates/tweets.php");
 			?>
-			<a href=" <?php echo $xmlTweets["link"] ?> ">follow me on twitter</a>
-			
-			</div>
+			<a href="https://twitter.com/DilgerTV">follow me on twitter</a>
+		</div>
 		<div class="half right">
 			<h1>coming up</h1>
-			<?php
-				$eventFound = false;
-				foreach ($xmlEvents as $event) {
-					if ($event["endTime"] >= time() && $event["startTime"] <= time() + $inFuture) {
-						echo createEvent($event);
-						$eventFound = true;
-					}
-				}
-				if (!$eventFound)
-					echo "<div class=\"event\">(no upcoming events)</div>";
-			?>
 			<h1>past events</h1>
-			<?php
-				$events = 0;
-				foreach ($xmlEvents as $event) {
-					$events ++;
-				}
-				$count = 0;
-				for ($i = $events; $i >= 0; $i--) {
-					$event = $xmlEvents -> event[$i - 1];
-					if ($event["endTime"] < time()) {
-						echo createEvent($event);
-						$count ++;
-					}
-					if ($count == $maxPastEvents)
-						break;
-				}
-			?>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>

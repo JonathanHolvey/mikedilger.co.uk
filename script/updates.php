@@ -37,20 +37,33 @@ class TwitterCache {
 				$tweet["time"] = strtotime($item->created_at);
 				$tweet["text"] = $item->text;
 				$tweet["id"] = $item->id_str;
+				$tweet["user"] = $this->user;
+				$tweet["url"] = "https://twitter.com/$this->user/statuses/$item->id_str";
 				array_unshift($this->tweets, $tweet);
 			}
 			$this->cacheTweets();
 		}
 	}
 
+	// Print new tweets as JSON
+	function sendNew() {
+		$output = array("new-tweets" => [], "modified" => time());
+		foreach ($this->tweets as $tweet) {
+			if ($this->fromId < $tweet["id"])
+				array_unshift($output["new-tweets"], $tweet);
+		}
+		echo(json_encode($output, true));
+
+	}
+
+	// Cache tweets in JSON file
 	private function cacheTweets() {
-		// Cache tweets in JSON file
-		$cache = array("tweets" => $this->tweets, "modified" => time(), "user" => $this->user);
+		$cache = array("tweets" => array_slice($this->tweets, 0, $this->count), "modified" => time());
 		file_put_contents($this->cacheFile, json_encode($cache, true));
 	}
 
+	// Load cached tweets and metadata
 	private function loadTweets() {
-		// Load cached tweets and metadata
 		if (is_file($this->cacheFile)) {
 			$cache = json_decode(file_get_contents($this->cacheFile), true);
 			$this->tweets = $cache["tweets"];
