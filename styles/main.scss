@@ -108,22 +108,14 @@ h2 {
 	margin-top: 0;
 	margin-bottom: 0.3em;
 }
-.tweet h2::before,
-.tweet h2::after {
+.tweet h2::before {
 	font-weight: bold;
 	line-height: 0.7em;
 	font-size: 170%;
 	vertical-align: top;
-}
-.tweet h2::before {
 	content: "\201C";
 	display: inline-block;
 	margin-right: 0.175em;
-}
-.tweet h2::after {
-	content: "\201D";
-	display: inline-block;
-	margin-left: 0.175em;
 }
 .tweet h2 a {
 	color: $light-orange;
