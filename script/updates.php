@@ -1,5 +1,7 @@
 <?php
 include_once("../libraries/twitteroauth.php");
+include_once("../libraries/iCalReader.php");
+
 if (!is_dir("../cache"))
 	mkdir("../cache");
 
@@ -10,7 +12,6 @@ class TwitterCache {
 		$this->count = $count;
 		$this->tweets = [];
 		$this->modified = 0;
-		$this->fromId = null;
 		$this->cacheFile = $file;
 		$this->cacheTime = 15 * 60;
 	}
@@ -18,17 +19,15 @@ class TwitterCache {
 	function getTweets() {
 		$this->loadTweets();
 		if ($this->modified < time() - $this->cacheTime) {
+			$this->tweets = array();
 			// Construct API endpoint
 			$url = "https://api.twitter.com/1.1/statuses/user_timeline.json?";
 			$options = array(
 				"screen_name" => $this->user,
-				"count" => $this->count,
+				"count" => $this->count * 2,
 				"include_rts" => "false",
 				"exclude_replies" => "true"
 			);
-			// Limit response to uncached tweets
-			if (!is_null($this->fromId))
-				$options["since_id"] = $this->fromId;
 
 			// Fetch and process tweets
 			$response = $this->auth->get($url . http_build_query($options));
@@ -41,24 +40,14 @@ class TwitterCache {
 				$tweet["url"] = "https://twitter.com/$this->user/statuses/$item->id_str";
 				array_unshift($this->tweets, $tweet);
 			}
+			$this->tweets = array_slice($this->tweets, 0, $this->count);
 			$this->cacheTweets();
 		}
 	}
 
-	// Print new tweets as JSON
-	function sendNew() {
-		$output = array("new-tweets" => [], "modified" => time());
-		foreach ($this->tweets as $tweet) {
-			if ($this->fromId < $tweet["id"])
-				array_unshift($output["new-tweets"], $tweet);
-		}
-		echo(json_encode($output, true));
-
-	}
-
 	// Cache tweets in JSON file
 	private function cacheTweets() {
-		$cache = array("tweets" => array_slice($this->tweets, 0, $this->count), "modified" => time());
+		$cache = array("tweets" => $this->tweets, "modified" => time());
 		file_put_contents($this->cacheFile, json_encode($cache, true));
 	}
 
@@ -68,6 +57,58 @@ class TwitterCache {
 			$cache = json_decode(file_get_contents($this->cacheFile), true);
 			$this->tweets = $cache["tweets"];
 			$this->fromId = $this->tweets[0]["id"];
+			$this->modified = $cache["modified"];
+		}
+	}
+}
+
+class CalendarCache {
+	function __construct($url, $past, $future, $file) {
+		$this->url = $url;
+		$this->past = $past * 60 * 60 * 24;
+		$this->future = $future * 60 * 60 * 24;
+		$this->events = [];
+		$this->modified = 0;
+		$this->cacheFile = $file;
+		$this->cacheTime = 15 * 60;
+	}
+
+	function getEvents() {
+		$this->loadEvents();
+		if ($this->modified < time() - $this->cacheTime) {
+			$this->events = array();
+			$future = time() + $this->future;
+			$past = time() - $this->past;
+			// Fetch and process events
+			$response = new iCalReader($this->url);
+			foreach($response->getEvents() as $item) {
+				$event = array();
+				$event["title"] = $item["SUMMARY"];
+				$event["description"] = $item["DESCRIPTION"];
+				$event["location"] = $item["LOCATION"];
+				$event["start"] = strtotime($item["DTSTART;VALUE=DATE"]);
+				$event["end"] = strtotime($item["DTEND;VALUE=DATE"]);
+				$event["modified"] = strtotime($item["LAST-MODIFIED"]);
+				$event["id"] = $item["UID"];
+				// Limit cached events to specified time period
+				if ($event["start"] < $future and $event["end"] > $past)
+					$this->events[] = $event;
+			}
+			$this->cacheEvents();
+		}
+	}
+
+	// Cache events in JSON file
+	private function cacheEvents() {
+		$cache = array("events" => $this->events, "modified" => time());
+		file_put_contents($this->cacheFile, json_encode($cache, true));
+	}
+
+	// Load cached events and metadata
+	private function loadEvents() {
+		if (is_file($this->cacheFile)) {
+			$cache = json_decode(file_get_contents($this->cacheFile), true);
+			$this->events = $cache["events"];
 			$this->modified = $cache["modified"];
 		}
 	}
