@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-
 <?php
-	$maxPastEvents = 7;
-	$inFuture = 60 * 60 * 24 * 90; // number of seconds in the future to include events for
-?>
+	$maxTweets = 6;
+	$maxEvents = 8;
 
+	$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
+	$eventCache = json_decode(file_get_contents("cache/events.json"), true);
+
+	$futureEvents = array();
+	$pastEvents = array();
+	foreach ($eventCache["events"] as $event) {
+		if ($event["end"] > time())
+			$futureEvents[] = $event;
+		else
+			$pastEvents[] = $event;
+	}
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Follow - Mike Dilger</title>
@@ -36,15 +46,28 @@
 			<div style="float:right"><a href="https://twitter.com/DilgerTV"><i>@DilgerTV</i> on twitter</a></div>
 			<h1>twitter</h1>
 			<?php 
-				$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
-				$tweets = array_slice($tweetCache["tweets"], 0, 6);
+				$tweets = array_slice($tweetCache["tweets"], 0, $maxTweets);
 				include("templates/tweets.php");
 			?>
 			<a href="https://twitter.com/DilgerTV">follow me on twitter</a>
 		</div>
 		<div class="half right">
 			<h1>coming up</h1>
+			<?php
+				$events = $futureEvents;
+				if (count($events) > 0)
+					include("templates/events.php");
+				else
+					echo("[No up-coming events]");
+			?>
 			<h1>past events</h1>
+			<?php
+				$events = array_slice(array_reverse($pastEvents), 0, $maxEvents);
+				if (count($events) > 0)
+					include("templates/events.php");
+				else
+					echo("[No recent events]");
+			?>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>

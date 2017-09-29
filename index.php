@@ -48,6 +48,19 @@
 			?>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
 			<h1>coming up</h1>
+			<?php
+				$eventCache = json_decode(file_get_contents("cache/events.json"), true);
+				$futureEvents = array();
+				foreach ($eventCache["events"] as $event) {
+					if ($event["end"] > time())
+						$futureEvents[] = $event;
+				}
+				$events = array_slice(array_reverse($futureEvents), 0, 1);
+				if (count($events) > 0)
+					include("templates/events.php");
+				else
+					echo("[No up-coming events]<br/>")
+			?>
 			<a href="follow">see more updates</a>
 		</div>
 	</div>

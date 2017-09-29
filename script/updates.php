@@ -94,8 +94,22 @@ class CalendarCache {
 				if ($event["start"] < $future and $event["end"] > $past)
 					$this->events[] = $event;
 			}
+			$this->sortEvents();
 			$this->cacheEvents();
 		}
+	}
+
+	// Sort events array chronologically by start date
+	function sortEvents() {
+		usort($this->events, array("CalendarCache", "eventCompare"));
+	}
+	static function eventCompare($a, $b) {
+		if ($a["start"] < $b["start"])
+			return -1;
+		elseif ($a["start"] == $b["start"])
+			return 0;
+		elseif ($a["start"] > $b["start"])
+			return 1;
 	}
 
 	// Cache events in JSON file
