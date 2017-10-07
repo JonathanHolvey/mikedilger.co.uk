@@ -13,7 +13,7 @@
 	<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
 	<meta name="copyright" content="" />
 	<meta name="content-Language" content="english" /> 
-	<meta name="description" content="Mike Dilger, current and past TV presenting projects, pictures, background information and contact details." />
+	<meta name="description" content="Official website of Mike dilger; naturalist, broadcaster and writer." />
 	<meta name="keywords" content="Mike Dilger, Michael Dilger, mike, dilger, naturalist, botanist, birder, ornithologist, presenter, natural history, BBC, Channel 5, wildlife, Nature's Calendar, Hands on Nature, Springwatch, Inside Out, Nature of Britain, Bristol, Natural History Unit, tv, television" />
 	<meta name="created" content="December 2006" />
 	<meta name="updated" content="August 2010" />
