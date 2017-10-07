@@ -72,5 +72,15 @@
 	</div>
 	<?php include("templates/footer.php"); ?>
 	<?php include("templates/defer.php"); ?>
+	<script>
+		$.ajax({
+			type: "get",
+			url: "/script/get-updates.php"
+		}).done(function(data, status, jqXHR) {
+			console.log(data);
+		}).fail(function(data, status, jqXHR) {
+			console.log("Update failed");
+		});
+	</script>
 </body>
 </html>

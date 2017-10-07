@@ -11,5 +11,5 @@ $calendarUrl = $calendarKeys->keys["url"];
 $calendar = new CalendarCache($calendarUrl, 60, 60, "../cache/events.json");
 $calendar->getEvents();
 
-$output = array("tweets" => $twitter->tweets, "events" => $calendar->events);
+$output = array("tweets" => $twitter->newTweets(), "events" => $calendar->newEvents());
 echo(json_encode($output, true));

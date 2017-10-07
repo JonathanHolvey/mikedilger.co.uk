@@ -12,6 +12,7 @@ class TwitterCache {
 		$this->count = $count;
 		$this->tweets = [];
 		$this->modified = 0;
+		$this->fromId = null;
 		$this->cacheFile = $file;
 		$this->cacheTime = 15 * 60;
 	}
@@ -43,6 +44,17 @@ class TwitterCache {
 			$this->tweets = array_slice($this->tweets, 0, $this->count);
 			$this->cacheTweets();
 		}
+	}
+
+	function newTweets() {
+		$output = array();
+		foreach ($this->tweets as $tweet) {
+			if ($tweet["id"] > $this->fromId)
+				array_unshift($output, $tweet);
+			else
+				break;
+		}
+		return $output;
 	}
 
 	// Cache tweets in JSON file
@@ -89,7 +101,7 @@ class CalendarCache {
 				$event["start"] = strtotime($item["DTSTART;VALUE=DATE"]);
 				$event["end"] = strtotime($item["DTEND;VALUE=DATE"]);
 				$event["modified"] = strtotime($item["LAST-MODIFIED"]);
-				$event["id"] = $item["UID"];
+				$event["id"] = str_replace("@google.com", "", $item["UID"]);
 				// Limit cached events to specified time period
 				if ($event["start"] < $future and $event["end"] > $past)
 					$this->events[] = $event;
@@ -97,6 +109,15 @@ class CalendarCache {
 			$this->sortEvents();
 			$this->cacheEvents();
 		}
+	}
+
+	function newEvents() {
+		$output = array();
+		foreach ($this->events as $event) {
+			if ($event["modified"] > $this->modified)
+				$output = $event;
+		}
+		return $output;
 	}
 
 	// Sort events array chronologically by start date
