@@ -42,7 +42,7 @@
 			<p>I am an ecologist, natural history presenter and writer. I have a life-long passion for British and tropical flora and fauna, of which I have profound experience and encyclopaedic knowledge.</p>
 			<p>I am committed to bringing the beauty of the natural world to a broader audience with enthusiasm and insight, rather than sensation or gimmicks.</p>
 			<div class="play-link"><a href="showreel">watch my showreel</a></div>
-			<div style="clear:both"><a href="updates">find out what I'm up to</a></div>
+			<div style="clear:both"><a href="follow">find out what I'm up to</a></div>
 		</div>
 		<div class="third middle">
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
