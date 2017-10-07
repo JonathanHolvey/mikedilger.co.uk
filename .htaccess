@@ -11,7 +11,7 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Forward old urls
-RewriteRule ^index.html / [R=301,NC,L]
+RewriteRule ^index.html|index.php / [R=301,NC,L]
 RewriteRule ^background.html /background [R=301,NC,L]
 RewriteRule ^tvpresenting.html|tvPresenting.php /broadcasting [R=301,NC,L]
 RewriteRule ^otherWork.php /writing [R=301,NC,L]
