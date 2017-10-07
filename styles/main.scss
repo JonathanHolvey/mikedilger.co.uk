@@ -42,23 +42,23 @@ ol {
 header {
 	width: 100%;
 	position: relative;
-}
-header .banner {
-	height: 12.5em;
-	margin-bottom: 2.5em;
-}
-header .image {
-	background-repeat: no-repeat;
-	float: left;
-	width: 50%;
-	height: 100%;
-	max-width: 50%;
-}
-header .image.left {
-	background-position: right;
-}
-header .image.right {
-	background-position: left;
+	.banner {
+		height: 12.5em;
+		margin-bottom: 2.5em;
+	}
+	.image {
+		background-repeat: no-repeat;
+		float: left;
+		width: 50%;
+		height: 100%;
+		max-width: 50%;
+	}
+	.image.left {
+		background-position: right;
+	}
+	.image.right {
+		background-position: left;
+	}
 }
 .logo {
 	display: block;
@@ -67,11 +67,11 @@ header .image.right {
 	top: 6.7em;
 	width: 100%;
 	height: 8em;
-}
-.logo img {
-	position: relative;
-	left: 1.1875em;
-	height: 100%;
+	img {
+		position: relative;
+		left: 1.1875em;
+		height: 100%;
+	}
 }
 nav {
 	margin-bottom: 1.25em;
@@ -80,14 +80,14 @@ nav {
 	text-align: center;
 	font-size: 120%;
 	cursor: default;
-}
-nav a {
-	color: $light-grey;
-	display: inline-block;
-	margin: 0 0.45em;
-}
-nav div {
-	display: inline-block;
+	a {
+		color: $light-grey;
+		display: inline-block;
+		margin: 0 0.45em;
+	}
+	div {
+		display: inline-block;
+	}
 }
 .content {
 	width: 100%;
@@ -99,6 +99,14 @@ nav div {
 .event {
 	line-height: 1.375em;
 	margin-bottom: 1.2em;
+	.description,
+	.location,
+	.time {
+		font-size: 80%;
+		color: $dark-grey;
+		line-height: 1.328em;
+		margin-top: 0.3125em;
+	}
 }
 h2 {
 	font-size: 120%;
@@ -108,37 +116,30 @@ h2 {
 	margin-top: 0;
 	margin-bottom: 0.3em;
 }
-.tweet h2::before,
-.tweet h2::after {
-	font-weight: bold;
-	line-height: 0.7em;
-	font-size: 170%;
-	vertical-align: top;
-}
-.tweet h2::before {
-	content: "\201C";
-	display: inline-block;
-	margin-right: 0.175em;
-}
-.tweet h2::after {
-	content: "\201D";
-	display: inline-block;
-	margin-left: 0.175em;
-}
-.tweet h2 a {
-	color: $light-orange;
-}
-.tweet .time,
-.event .description,
-.event .location,
-.event .time {
-	font-size: 80%;
-	color: $dark-grey;
-	line-height: 1.328em;
-	margin-top: 0.3125em;
-}
-.tweet .time a {
-	color: $dark-grey;
+.tweet {
+	h2::before,
+	h2::after {
+		font-weight: bold;
+		line-height: 0.7em;
+		font-size: 170%;
+		vertical-align: top;
+	}
+	h2::before {
+		content: "\201C";
+		display: inline-block;
+		margin-right: 0.175em;
+	}
+	h2::after {
+		content: "\201D";
+		display: inline-block;
+		margin-left: 0.175em;
+	}
+	h2 a {
+		color: $light-orange;
+	}
+	.time a {
+		color: $dark-grey;
+	}
 }
 h1 {
 	color: $blue;
@@ -155,57 +156,57 @@ footer {
 	color: $light-grey;
 	text-align: center;
 	font-size: 80%;
-}
-footer a {
-	color: $light-grey;
+	a {
+		color: $light-grey;
+	}
 }
 .third {
 	width: 16.25em;
 	float: left;
 	min-height: 24.375em;
-}
-.third.left {
-	border-right: 1px solid $light-grey;
-	padding-right: 1.1875em;
-	margin-right: 1.25em;
-}
-.third.right {
-	border-left: 1px solid $light-grey;
-	padding-left: 1.1875em;
-	margin-left: 1.25em;
+	&.left {
+		border-right: 1px solid $light-grey;
+		padding-right: 1.1875em;
+		margin-right: 1.25em;
+	}
+	&.right {
+		border-left: 1px solid $light-grey;
+		padding-left: 1.1875em;
+		margin-left: 1.25em;
+	}
 }
 .half {
 	width: 50%;
 	box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
-}
-.half.left {
-	float: left;
-	border-right: 1px solid $light-grey;
-	left: 0.5px;
-	clear: left;
-	padding-left: 2em;
-	padding-right: 1em;
-}
-.half.right {
-	float: right;
-	border-left: 1px solid $light-grey;
-	right: 0.5px;
-	padding-right: 2em;
-	padding-left: 1em;
+	&.left {
+		float: left;
+		border-right: 1px solid $light-grey;
+		left: 0.5px;
+		clear: left;
+		padding-left: 2em;
+		padding-right: 1em;
+	}
+	&.right {
+		float: right;
+		border-left: 1px solid $light-grey;
+		right: 0.5px;
+		padding-right: 2em;
+		padding-left: 1em;
+	}
 }
 .image-block {
 	text-align: center;
 	overflow: hidden;
-}
-.image-block img {
-	display: inline-block;
-	width: 100%;
-	margin: 0 auto 0.625em;
-}
-.image-block img:last-child {
-	margin-bottom: 0;
+	img {
+		display: inline-block;
+		width: 100%;
+		margin: 0 auto 0.625em;
+	}
+	img:last-child {
+		margin-bottom: 0;
+	}
 }
 .play-link {
 	white-space: nowrap;
@@ -215,28 +216,28 @@ footer a {
 	vertical-align: baseline;
 	padding-left: 2.275em;
 	position: relative;
-}
-.play-link::before {
-	content: "";
-	width: 1.875em;
-	height: 1.875em;
-	display: block;
-	background-color: $dark-orange;
-	background-image: url("/images/play.svg");
-	background-size: 0.8em;
-	background-repeat: no-repeat;
-	background-position: 0.7em center;
-	border-radius:  1.875em;
-	margin-right: 0.4em;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.play-link:hover::before {
-	background-color: $light-orange;
-}
-.play-link:hover {
-	background-position: bottom left;
+	&::before {
+		content: "";
+		width: 1.875em;
+		height: 1.875em;
+		display: block;
+		background-color: $dark-orange;
+		background-image: url("/images/play.svg");
+		background-size: 0.8em;
+		background-repeat: no-repeat;
+		background-position: 0.7em center;
+		border-radius:  1.875em;
+		margin-right: 0.4em;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&:hover::before {
+		background-color: $light-orange;
+	}
+	&:hover {
+		background-position: bottom left;
+	}
 }
 .more {
 	display: none;
@@ -247,29 +248,29 @@ footer a {
 .book {
 	text-align: center;
 	margin-top: 0.625em;
-}
-.book img {
-	max-width: 9.375em;
-	border: 1px solid $light-grey;
+	img {
+		max-width: 9.375em;
+		border: 1px solid $light-grey;
+	}
 }
 
 @media all and (max-width: 57em) {
 	.third {
 		width: 40%;
 		box-sizing: border-box;
-	}
-	.third.right {
-		float: none;
-		clear: both;
-		width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-		border-left: 0;
-		min-height: 0;
-		padding-left: 0;
-	}
-	.third.left {
-		margin-left: 10%;
+		&.right {
+			float: none;
+			clear: both;
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+			border-left: 0;
+			min-height: 0;
+			padding-left: 0;
+		}
+		&.left {
+			margin-left: 10%;
+		}
 	}
 	.play-link {
 		float: none;
@@ -305,21 +306,23 @@ footer a {
 }
 
 @media all and (max-width: 38em) {
-	.third.left,
-	.third.middle,
-	.third.right {
-		float: none;
-		width: 100%;
-		border: 0;
-		min-height: 0;
-		padding: 0;
-		margin: 0;
-		padding-left: 2em;
-		padding-right: 2em;
-		margin-bottom: 1em;
-	}
-	.third.middle {
-		text-align: center;
+	.third {
+		&.left,
+		&.middle,
+		&.right {
+			float: none;
+			width: 100%;
+			border: 0;
+			min-height: 0;
+			padding: 0;
+			margin: 0;
+			padding-left: 2em;
+			padding-right: 2em;
+			margin-bottom: 1em;
+		}
+		&.middle {
+			text-align: center;
+		}
 	}
 }
 
