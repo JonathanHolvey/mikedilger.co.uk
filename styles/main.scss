@@ -159,6 +159,10 @@ footer {
 	a {
 		color: $light-grey;
 	}
+	span {
+		display: inline-block;
+		margin: 0 1em;
+	}
 }
 .third {
 	width: 16.25em;
