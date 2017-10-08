@@ -35,7 +35,7 @@ class TwitterCache {
 			foreach (array_reverse($response) as $item) {
 				$tweet = array();
 				$tweet["time"] = strtotime($item->created_at);
-				$tweet["text"] = $item->text;
+				$tweet["text"] = html_entity_decode($item->text);
 				$tweet["id"] = $item->id_str;
 				$tweet["user"] = $this->user;
 				$tweet["url"] = "https://twitter.com/$this->user/statuses/$item->id_str";
