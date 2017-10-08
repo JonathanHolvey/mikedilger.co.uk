@@ -27,7 +27,7 @@
 	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
-			<h1>background</h1>
+			<h1>Background</h1>
 			<h2>I consider myself an incredibly experienced and relaxed presenter</h2>
 			<p>Having spent a substantial time behind the camera, I fully appreciate the team ethic behind making TV and radio programmes and am always well prepared, willing to work incredibly hard and happy to muck in.</p>
 			<p>Having spent long periods abroad in remote locations, I am pretty resilient, exceptionally experienced and happy to work, in the words of the  Martini advert, &quot;anytime, anyplace anywhere!&quot;</p>
@@ -63,7 +63,7 @@
 				<li><i>Birds on the Beeb</i> is a trip down memory lane of some of my favourite birding moments over the last 10 years.</li>
 				<li><i>Mike Dilger Shows You How to Fly</i> is a lesson in defying gravity!</li>
 			</ul>
-			<h1>lesser known facts about me</h1>
+			<h1>Lesser known facts about me</h1>
 			<!--<p>I briefly held the Guinness World Record for &quot;The Most Snails on the Face in One Minute&quot;. At 37, the record was claimed in Covent Garden on the set of The One Show in 2009, before being beaten later that year.</p>
 			<p>At the Rutland Birdfair I beat all other wildlife presenters to become Wild Brain of Britain 2010 and held onto the trophy at the Birdfair in 2011 – can I make it three years in a row!?</p>
 			<p>Whilst confining my activity to weight-lifting, jogging and golf, I adore watching all sport. My support for Manchester United tends to be from the comfort of an armchair, I am however a sucker for punishment in the form of a Bristol City season ticket!</p>-->
@@ -71,7 +71,7 @@
 			<p>I briefly held the Guinness World Record for "The Most Snails on the Face in One Minute". At 37, the record was claimed in Covent Garden on the set of The One Show in 2009, before being beaten later that year.</p>
 			<p>At the Rutland Birdfair I beat all other wildlife presenters to become Wild Brain of Britain 2010 and 2011.</p>
 			<p>I was in a team of Celebrity Eggheads, which beat the 'real Eggheads' in 2011 and featured for the University of Nottingham on <i>Celebrity University Challenge</i> in 2013.</p>
-			<h1>charities</h1>
+			<h1>Charities</h1>
 			<p>I have just been delighted to accept patronage of the charity Froglife</p>
 			<p>I am Vice President of Butterfly Conservation.<br/><a href="http://www.butterfly-conservation.org">Butterfly Conservation website</a></p>
 			<p>I am a Patron of the Essex Badger Protection Group.<br/><a href="http://www.badgerland.co.uk/badgergroups/southeast/essexbadgerprotectiongroup.html">Badger Protection website</a></p>

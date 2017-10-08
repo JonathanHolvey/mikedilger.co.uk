@@ -27,7 +27,7 @@
 	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
-			<h1>books</h1>
+			<h1>Books</h1>
 			<h2>My Garden and Other Animals</h2>
 			<p>Look out for my latest book - <a href="https://www.amazon.co.uk/Mike-Dilger/e/B0034O9ASW">Order your copy on Amazon</a></p>
 			<p>Have you ever wondered what our birds get up to when they're not pinching our peanuts, pilfering our pyracantha berries or nesting under the eaves of our homes? Find out the answers in <i>Nightingales in November</i>.</p>
@@ -43,7 +43,7 @@
 			<h2>Nature's Babies</h2>
 			<p>A fun and informative look at the immense variety of young animals the natural world has to offer</p>
 			<p class="book"><img src="images/naturesBabies.jpg" alt=""/></p>
-			<h1>articles</h1>
+			<h1>Articles</h1>
 			<ul>
 				<li>Occasional articles for the WWT Waterlife, BBC wildlife and BBC Countryfile magazines</li>
 				<li>A monthly e-zine article for CJ Wildbird foods between 2008 and 2009</li>

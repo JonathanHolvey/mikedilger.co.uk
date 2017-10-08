@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="half left">
-			<h1>current presenting projects</h1>
+			<h1>Current presenting projects</h1>
 			<h2>Wildlife Reporter on <i>The ONE Show</i></h2>
 			<p>BBC1 - from April 2008 to present</p>
 			<p>Appearing on our screens every weekday at 7pm on BBC1 for around 11 months a year, this immensely popular magazine programme in the space of five years has already become a national institution. Having presented over 240 items and made more than 100 appearances in the studio to discuss a varied range of natural history and environmental issues, I have both become the wildlife face of the programme and a key family member of the One Show family. Items covered have included anything from snorkelling with basking sharks to fighting like a stag beetle and filming everything from British-born beavers to booming bitterns.</p>
@@ -53,7 +53,7 @@
 			<a class="showMore">click here for past presenting projects</a>
 		</div>
 		<div class="more">
-			<h1>past presenting projects</h1>
+			<h1>Past presenting projects</h1>
 			<h2>Co-presenter on <i>Nature's Top 40</i></h2>
 			<p>BBC2 - shown in autumn 2008</p>
 			<p>What are Britain's greatest Wildlife spectacles? In this ten part series, I give a Top 40 countdown of the very best of British wildlife. The series shows the viewer how and then explains why hares box, bluebells flower in synchrony, birds sing at dawn and adders dance.</p>
