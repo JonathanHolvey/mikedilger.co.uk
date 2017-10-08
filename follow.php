@@ -58,7 +58,7 @@
 				if (count($events) > 0)
 					include("templates/events.php");
 				else
-					echo("[No up-coming events]");
+					echo("<div class=\"event\">(No upcoming events)</div>");
 			?>
 			<h1>past events</h1>
 			<?php
@@ -66,7 +66,7 @@
 				if (count($events) > 0)
 					include("templates/events.php");
 				else
-					echo("[No recent events]");
+					echo("<div class=\"event\">(No recent events)</div>");
 			?>
 		</div>
 	</div>

@@ -59,7 +59,7 @@
 				if (count($events) > 0)
 					include("templates/events.php");
 				else
-					echo("[No up-coming events]<br/>")
+					echo("<div class=\"event\">(No upcoming events)</div>");
 			?>
 			<a href="follow">see more updates</a>
 		</div>
