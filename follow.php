@@ -45,27 +45,27 @@
 		<div class="half left">
 			<div style="float:right"><a href="https://twitter.com/DilgerTV"><i>@DilgerTV</i> on twitter</a></div>
 			<h1>twitter</h1>
-			<?php 
+			<?php
 				$tweets = array_slice($tweetCache["tweets"], 0, $maxTweets);
-				include("templates/tweets.php");
+				foreach ($tweets as $tweet) {
+					include("templates/tweet.php");
+				}
 			?>
 			<a href="https://twitter.com/DilgerTV">follow me on twitter</a>
 		</div>
 		<div class="half right">
 			<h1>coming up</h1>
 			<?php
-				$events = $futureEvents;
-				if (count($events) > 0)
-					include("templates/events.php");
-				else
+				foreach ($futureEvents as $event)
+					include("templates/event.php");
+				if (count($futureEvents) == 0)
 					echo("<div class=\"event\">(No upcoming events)</div>");
 			?>
 			<h1>past events</h1>
 			<?php
-				$events = array_slice(array_reverse($pastEvents), 0, $maxEvents);
-				if (count($events) > 0)
-					include("templates/events.php");
-				else
+				foreach (array_slice(array_reverse($pastEvents), 0, $maxEvents) as $event)
+					include("templates/event.php");
+				if (count($pastEvents) == 0)
 					echo("<div class=\"event\">(No recent events)</div>");
 			?>
 		</div>
@@ -77,7 +77,7 @@
 			type: "get",
 			url: "/script/get-updates.php"
 		}).done(function(data, status, jqXHR) {
-			console.log(data);
+			tweetUpdates(data.tweets);
 		}).fail(function(data, status, jqXHR) {
 			console.log("Update failed");
 		});

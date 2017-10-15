@@ -43,8 +43,8 @@
 			<h1>twitter</h1>
 			<?php
 				$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
-				$tweets = array_slice($tweetCache["tweets"], 0, 1);
-				include("templates/tweets.php");
+				$tweet = $tweetCache["tweets"][0];
+				include("templates/tweet.php");
 			?>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
 			<h1>coming up</h1>
