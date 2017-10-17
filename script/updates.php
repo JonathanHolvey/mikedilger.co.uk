@@ -50,7 +50,7 @@ class TwitterCache {
 		$output = array();
 		foreach ($this->tweets as $tweet) {
 			if ($tweet["id"] > $this->fromId)
-				array_unshift($output, $tweet);
+				$output[] = $tweet;
 			else
 				break;
 		}
@@ -115,7 +115,7 @@ class CalendarCache {
 		$output = array();
 		foreach ($this->events as $event) {
 			if ($event["modified"] > $this->modified)
-				$output = $event;
+				$output[] = $event;
 		}
 		return $output;
 	}
