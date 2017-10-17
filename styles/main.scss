@@ -99,6 +99,20 @@ nav div {
 .event {
 	line-height: 1.375em;
 	margin-bottom: 1.2em;
+	transition: opacity 0.5s,
+				height 0.25s,
+				margin 0.25s,
+				padding 0.25s;
+	&.collapsed {
+		height: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	&.hidden {
+		opacity: 0;
+	}
 }
 h2 {
 	font-size: 120%;

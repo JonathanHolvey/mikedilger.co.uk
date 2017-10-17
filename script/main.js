@@ -49,3 +49,37 @@ $(document).ready(function() {
 		scrollTo(offset.left,offset.top);
 	});
 });
+
+// create new tweet elements from AJAX response
+function tweetUpdates(tweets) {
+	var target = $(".tweets");
+	tweets.forEach(function(tweet) {
+		showItem(tweet.html, target);
+	});
+}
+
+// create new event elements from AJAX response
+function eventUpdates(events) {
+	if (events.length > 0)
+		$(".event.placeholder").hide();
+	var target = $(".future-events");
+	events.forEach(function(event) {
+		showItem(event.html, target);
+	});
+}
+
+// show new content and animate using CSS transitions
+function showItem(item, target) {
+	item = $(item);
+	item.addClass("hidden").css("position", "absolute");
+	target.prepend(item);
+	var height = item.outerHeight();
+	item.addClass("collapsed")
+		.css("position", "")
+		.height(height)
+		.removeClass("collapsed");
+	item.on("transitionend", function() {
+		item.removeClass("hidden")
+			.height("");
+	});
+}
