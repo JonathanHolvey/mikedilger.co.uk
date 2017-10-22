@@ -21,10 +21,34 @@
 </head>
 <body>
 	<?php include("templates/header.php"); ?>
-	<div class="content" style="height:478px">
-		<iframe style="width:800px;height:475px;margin:0 25px" src="https://www.youtube.com/embed/kmQrAsXBRV4?rel=0&amp;autoplay=1" frameborder="0"></iframe>
+	<div class="content">
+		<iframe style="width:800px;height:475px" src="https://www.youtube.com/embed/kmQrAsXBRV4?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0"" frameborder="0"></iframe>
 	</div>
 	<?php include("templates/footer.php"); ?>
 	<?php include("templates/defer.php"); ?>
+	<script>
+		// make embedded youtube videos responsive
+		var $videos = $("iframe[src*='//www.youtube.com']"),
+		$container = $(".content");
+		$videos.each(function() {
+			$(this)
+				.data("aspectRatio", $(this).height() / $(this).width())
+				// remove hard coded width and height
+				.removeAttr("height")
+				.removeAttr("width");
+			console.log($(this).width);
+		});
+
+		$(window).resize(function() {
+			// resize all videos according to their aspect ratio
+			 $videos.each(function() {
+				var width = $container.width() - $(this).outerWidth(true) + $(this).width();
+				var $el = $(this);
+				$el
+					.width(width)
+					.height(width * $el.data("aspectRatio"));
+			});
+		}).resize();
+	</script>
 </body>
 </html>
