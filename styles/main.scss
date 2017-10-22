@@ -113,6 +113,9 @@ nav {
 	&.hidden {
 		opacity: 0;
 	}
+	span {
+		display: inline-block;
+	}
 }
 h2 {
 	font-size: 120%;
@@ -134,15 +137,15 @@ h2 {
 .tweet h2 a {
 	color: $light-orange;
 }
+.event .time,
 .tweet .time,
-.event .description,
-.event .location,
-.event .time {
-	font-size: 80%;
+.event .location {
+	font-size: 90%;
 	color: $dark-grey;
 	line-height: 1.328em;
 	margin-top: 0.3125em;
-	display: block;
+	// display: block;
+	// font-style: italic;
 }
 h1 {
 	color: $blue;
