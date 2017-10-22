@@ -99,13 +99,19 @@ nav {
 .event {
 	line-height: 1.375em;
 	margin-bottom: 1.2em;
-	.description,
-	.location,
-	.time {
-		font-size: 80%;
-		color: $dark-grey;
-		line-height: 1.328em;
-		margin-top: 0.3125em;
+	transition: opacity 0.5s,
+				height 0.25s,
+				margin 0.25s,
+				padding 0.25s;
+	&.collapsed {
+		height: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	&.hidden {
+		opacity: 0;
 	}
 }
 h2 {
@@ -116,30 +122,27 @@ h2 {
 	margin-top: 0;
 	margin-bottom: 0.3em;
 }
-.tweet {
-	h2::before,
-	h2::after {
-		font-weight: bold;
-		line-height: 0.7em;
-		font-size: 170%;
-		vertical-align: top;
-	}
-	h2::before {
-		content: "\201C";
-		display: inline-block;
-		margin-right: 0.175em;
-	}
-	h2::after {
-		content: "\201D";
-		display: inline-block;
-		margin-left: 0.175em;
-	}
-	h2 a {
-		color: $light-orange;
-	}
-	.time a {
-		color: $dark-grey;
-	}
+.tweet h2::before {
+	font-weight: bold;
+	line-height: 0.7em;
+	font-size: 170%;
+	vertical-align: top;
+	content: "\201C";
+	display: inline-block;
+	margin-right: 0.175em;
+}
+.tweet h2 a {
+	color: $light-orange;
+}
+.tweet .time,
+.event .description,
+.event .location,
+.event .time {
+	font-size: 80%;
+	color: $dark-grey;
+	line-height: 1.328em;
+	margin-top: 0.3125em;
+	display: block;
 }
 h1 {
 	color: $blue;

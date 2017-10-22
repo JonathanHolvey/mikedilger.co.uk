@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-	include_once "script/createUpdates.php";
-	$xmlTweets = simplexml_load_file("tweets.xml");
-	$xmlEvents = simplexml_load_file("events.xml");
-	date_default_timezone_set("Europe/London");		
-?>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Mike Dilger</title>
@@ -48,26 +40,36 @@
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
 		</div>
 		<div class="third right">
-			<h1>Twitter</h1>
-			<?php echo createTweet($xmlTweets -> tweet[0]); ?>
+			<h1>twitter</h1>
+			<div class="tweets" data-max-items="1">
+				<?php
+					$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
+					$tweet = $tweetCache["tweets"][0];
+					include("templates/tweet.php");
+				?>
+			</div>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
-			<h1>Coming up</h1>
-			<?php
-				$eventFound = false;
-				foreach ($xmlEvents as $event) {
-					if ($event["endTime"] > time()) {
-						echo createEvent($event);
-						$eventFound = true;
-						break;
+			<h1>coming up</h1>
+			<div class="future-events" data-max-items="1">
+				<?php
+					$eventCache = json_decode(file_get_contents("cache/events.json"), true);
+					$futureEvents = array();
+					foreach ($eventCache["events"] as $event) {
+						if ($event["end"] > time())
+							$futureEvents[] = $event;
 					}
-				}
-				if (!$eventFound)
-					echo "<div class=\"event\">(no upcoming events)</div>";
-			?>
+					$events = array_slice(array_reverse($futureEvents), 0, 1);
+					if (count($events) > 0)
+						include("templates/events.php");
+					else
+						echo("<div class=\"event\">(No upcoming events)</div>");
+				?>
+			</div>
 			<a href="follow">see more updates</a>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>
 	<?php include("templates/defer.php"); ?>
+	<script>getUpdates();</script>
 </body>
 </html>
