@@ -19,6 +19,7 @@ foreach ($twitter->newTweets() as $tweet) {
 $calendarKeys = new Keystore("e0ef9123-57d5-43ed-ad17-1f86c7a67ba3");
 $calendarUrl = $calendarKeys->keys["url"];
 $calendar = new CalendarCache($calendarUrl, 60, 60, "../cache/events.json");
+$calendar->getEvents();
 // Render event HTML from template and add to output array
 foreach ($calendar->newEvents() as $event) {
 	ob_start();
