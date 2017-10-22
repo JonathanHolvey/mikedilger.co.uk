@@ -42,7 +42,7 @@ $(document).ready(function() {
 	});
 	
 	// show extra content
-	$(".showMore").click(function() {
+	$(".show-more").click(function() {
 		$(".more").show();
 		$(this).hide();
 		var offset = $(".more").offset();

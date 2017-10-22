@@ -27,9 +27,9 @@
 	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
+			<a class="action-link floating" href="https://www.amazon.co.uk/Mike-Dilger/e/B0034O9ASW">see my books on Amazon</a>
 			<h1>Books</h1>
 			<h2>My Garden and Other Animals</h2>
-			<p>Look out for my latest book - <a href="https://www.amazon.co.uk/Mike-Dilger/e/B0034O9ASW">Order your copy on Amazon</a></p>
 			<p>Have you ever wondered what our birds get up to when they're not pinching our peanuts, pilfering our pyracantha berries or nesting under the eaves of our homes? Find out the answers in <i>Nightingales in November</i>.</p>
 			<div class="book"><a href="https://www.amazon.co.uk/Nightingales-November-Mike-Dilger"><img src="images/nightingalesInNovember.jpg" alt=""/></a></div>
 			<h2>My Garden and Other Animals</h2>

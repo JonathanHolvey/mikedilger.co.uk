@@ -50,7 +50,7 @@
 			<h2>Reporter on <i>Inside Out</i></h2>
 			<p>BBC1 - from 2004 to present</p>
 			<p>Inside Out is a long-standing regional magazine programme which highlights a variety of surprising stories from familiar places. I report on a vast range of wildlife reports for the programme for the BBC Bristol, Plymouth, London, Leeds, Norwich, Southampton and Nottingham regions. Projects undertaken have included following the epic journey of a hooded seal from Orkney to Spain, the first ever filmed birth of a baby black rhino in captivity and the unprecedented transport of 13 Romanian lions to their new home at the Yorkshire Wildlife Park in Doncaster.</p>
-			<a class="showMore">click here for past presenting projects</a>
+			<a class="action-link show-more">click for past presenting projects</a>
 		</div>
 		<div class="more">
 			<h1>Past presenting projects</h1>

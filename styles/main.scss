@@ -113,6 +113,9 @@ nav {
 	&.hidden {
 		opacity: 0;
 	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 	span {
 		display: inline-block;
 	}
@@ -221,12 +224,12 @@ footer {
 }
 .play-link {
 	white-space: nowrap;
-	cursor: pointer;
-	margin-bottom: 0.625em;
 	line-height: 1.875em;
 	vertical-align: baseline;
 	padding-left: 2.275em;
 	position: relative;
+	cursor: pointer;
+	display: inline-block;
 	&::before {
 		content: "";
 		width: 1.875em;
@@ -237,7 +240,7 @@ footer {
 		background-size: 0.8em;
 		background-repeat: no-repeat;
 		background-position: 0.7em center;
-		border-radius:  1.875em;
+		border-radius: 1.875em;
 		margin-right: 0.4em;
 		position: absolute;
 		top: 0;
@@ -246,9 +249,20 @@ footer {
 	&:hover::before {
 		background-color: $light-orange;
 	}
-	&:hover {
-		background-position: bottom left;
+}
+.action-link {
+	display: inline-block;
+	margin: 0.2em 0;
+	& + *:not(.action-link) {
+		margin-top: 1rem;
 	}
+	&.floating {
+		float: right;
+		margin-top: 1em;
+	}
+}
+*:not(h1) + .action-link {
+	margin-top: 0.5em;
 }
 .more {
 	display: none;

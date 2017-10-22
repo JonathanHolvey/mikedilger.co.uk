@@ -33,8 +33,8 @@
 			<h1>About me</h1>
 			<p>I am an ecologist, natural history presenter and writer. I have a life-long passion for British and tropical flora and fauna, of which I have profound experience and encyclopaedic knowledge.</p>
 			<p>I am committed to bringing the beauty of the natural world to a broader audience with enthusiasm and insight, rather than sensation or gimmicks.</p>
-			<div class="play-link"><a href="showreel">watch my showreel</a></div>
-			<div style="clear:both"><a href="follow">find out what I'm up to</a></div>
+			<a class="action-link play-link" href="showreel">watch my showreel</a>
+			<a class="action-link" href="follow">find out what I'm up to</a>
 		</div>
 		<div class="third middle">
 			<img src="images/photo_wall.jpg" alt="" class="noTitle"/>
@@ -48,7 +48,7 @@
 					include("templates/tweet.php");
 				?>
 			</div>
-			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
+			<a class="action-link" href="https://twitter.com/DilgerTV">follow <i>@DilgerTV</i> on twitter</a>
 			<h1>coming up</h1>
 			<div class="future-events" data-max-items="1">
 				<?php
@@ -65,7 +65,7 @@
 						echo("<div class=\"event\">(No upcoming events)</div>");
 				?>
 			</div>
-			<a href="follow">see more updates</a>
+			<a class="action-link" href="follow">see more updates</a>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>

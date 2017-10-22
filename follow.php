@@ -43,7 +43,7 @@
 	<?php include("templates/header.php"); ?>
 	<div class="content">
 		<div class="half left">
-			<div style="float:right"><a href="https://twitter.com/DilgerTV"><i>@DilgerTV</i> on twitter</a></div>
+			<a class="action-link floating" href="https://twitter.com/DilgerTV">follow <i>@DilgerTV</i> on twitter</a>
 			<h1>twitter</h1>
 			<div class="tweets" data-max-items="<?= $maxTweets ?>">
 				<?php
@@ -53,7 +53,7 @@
 					}
 				?>
 			</div>
-			<a href="https://twitter.com/DilgerTV">follow me on twitter</a>
+			<a class="action-link" href="https://twitter.com/DilgerTV">follow me on twitter</a>
 		</div>
 		<div class="half right">
 			<h1>coming up</h1>
