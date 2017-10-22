@@ -41,30 +41,35 @@
 		</div>
 		<div class="third right">
 			<h1>twitter</h1>
-			<?php
-				$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
-				$tweet = $tweetCache["tweets"][0];
-				include("templates/tweet.php");
-			?>
+			<div class="tweets" data-max-items="1">
+				<?php
+					$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
+					$tweet = $tweetCache["tweets"][0];
+					include("templates/tweet.php");
+				?>
+			</div>
 			<div style="margin:-10px 0 10px 0"><?php echo "<a href=\"" . $xmlTweets["link"] . "\">follow <i>@DilgerTV</i> on twitter</a>" ?></div>
 			<h1>coming up</h1>
-			<?php
-				$eventCache = json_decode(file_get_contents("cache/events.json"), true);
-				$futureEvents = array();
-				foreach ($eventCache["events"] as $event) {
-					if ($event["end"] > time())
-						$futureEvents[] = $event;
-				}
-				$events = array_slice(array_reverse($futureEvents), 0, 1);
-				if (count($events) > 0)
-					include("templates/events.php");
-				else
-					echo("<div class=\"event\">(No upcoming events)</div>");
-			?>
+			<div class="future-events" data-max-items="1">
+				<?php
+					$eventCache = json_decode(file_get_contents("cache/events.json"), true);
+					$futureEvents = array();
+					foreach ($eventCache["events"] as $event) {
+						if ($event["end"] > time())
+							$futureEvents[] = $event;
+					}
+					$events = array_slice(array_reverse($futureEvents), 0, 1);
+					if (count($events) > 0)
+						include("templates/events.php");
+					else
+						echo("<div class=\"event\">(No upcoming events)</div>");
+				?>
+			</div>
 			<a href="follow">see more updates</a>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>
 	<?php include("templates/defer.php"); ?>
+	<script>getUpdates();</script>
 </body>
 </html>

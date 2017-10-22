@@ -45,7 +45,7 @@
 		<div class="half left">
 			<div style="float:right"><a href="https://twitter.com/DilgerTV"><i>@DilgerTV</i> on twitter</a></div>
 			<h1>twitter</h1>
-			<div class="tweets">
+			<div class="tweets" data-max-items="<?= $maxTweets ?>">
 				<?php
 					$tweets = array_slice($tweetCache["tweets"], 0, $maxTweets);
 					foreach ($tweets as $tweet) {
@@ -57,7 +57,7 @@
 		</div>
 		<div class="half right">
 			<h1>coming up</h1>
-			<div class="future-events">
+			<div class="future-events" data-max-items="<?= $maxEvents ?>">
 				<?php
 					foreach ($futureEvents as $event)
 						include("templates/event.php");
@@ -74,16 +74,6 @@
 	</div>
 	<?php include("templates/footer.php"); ?>
 	<?php include("templates/defer.php"); ?>
-	<script>
-		$.ajax({
-			type: "get",
-			url: "/script/get-updates.php"
-		}).done(function(data, status, jqXHR) {
-			tweetUpdates(data.tweets);
-			eventUpdates(data.events);
-		}).fail(function(data, status, jqXHR) {
-			console.log("Update failed");
-		});
-	</script>
+	<script>getUpdates();</script>
 </body>
 </html>

@@ -53,6 +53,7 @@ $(document).ready(function() {
 // create new tweet elements from AJAX response
 function tweetUpdates(tweets) {
 	var target = $(".tweets");
+	tweets = tweets.slice(0, target.attr("data-max-items"));
 	tweets.forEach(function(tweet) {
 		showItem(tweet.html, target);
 	});
@@ -63,6 +64,7 @@ function eventUpdates(events) {
 	if (events.length > 0)
 		$(".event.placeholder").hide();
 	var target = $(".future-events");
+	events = events.slice(0, target.attr("data-max-items"));
 	events.forEach(function(event) {
 		showItem(event.html, target);
 	});
@@ -82,4 +84,21 @@ function showItem(item, target) {
 		item.removeClass("hidden")
 			.height("");
 	});
+	while (target.children().length > parseInt(target.attr("data-max-items")))
+		target.children().last().remove();
+}
+
+// retrieve updates via AJAX request
+function getUpdates() {
+	$.ajax({
+		type: "get",
+		url: "/script/get-updates.php"
+	}).done(function(data, status, jqXHR) {
+		tweetUpdates(data.tweets);
+		eventUpdates(data.events);
+	}).fail(function(data, status, jqXHR) {
+		console.log("Update failed");
+	});
+	// check again in 15 minutes
+	setTimeout(60 * 60 * 15, getUpdates);
 }
