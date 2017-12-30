@@ -11,12 +11,12 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Forward old URLs
-RewriteRule ^index.html|index.php / [R=301,NC,L]
+RewriteRule ^index.html|^index.php / [R=301,NC,L]
 RewriteRule ^background.html /background [R=301,NC,L]
-RewriteRule ^tvpresenting.html|tvPresenting.php /broadcasting [R=301,NC,L]
+RewriteRule ^tvpresenting.html|^tvPresenting.php /broadcasting [R=301,NC,L]
 RewriteRule ^otherWork.php /writing [R=301,NC,L]
 RewriteRule ^contact.html /contact [R=301,NC,L]
-RewriteRule ^updates.php|updates /follow [R=301,NC,L]
+RewriteRule ^updates.php|^updates /follow [R=301,NC,L]
 
 # 410 pages that no longer exist
 RewriteRule ^order.html - [R=410,L]
