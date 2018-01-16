@@ -65,11 +65,13 @@
 						echo("<div class=\"event placeholder\">(No upcoming events)</div>");
 				?>
 			</div>
-			<h1>past events</h1>
-			<?php
-				foreach (array_slice(array_reverse($pastEvents), 0, $maxEvents) as $event)
-					include("templates/event.php");
-			?>
+			<div class="past-events">
+				<h1>past events</h1>
+				<?php
+					foreach (array_slice(array_reverse($pastEvents), 0, $maxEvents) as $event)
+						include("templates/event.php");
+				?>
+			</div>
 		</div>
 	</div>
 	<?php include("templates/footer.php"); ?>
