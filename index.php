@@ -60,7 +60,7 @@
 					}
 					$events = array_slice(array_reverse($futureEvents), 0, 1);
 					if (count($events) > 0)
-						include("templates/events.php");
+						include("templates/event.php");
 					else
 						echo("<div class=\"event\">(No upcoming events)</div>");
 				?>
