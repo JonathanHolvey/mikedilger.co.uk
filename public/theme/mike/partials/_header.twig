@@ -1,10 +1,19 @@
-<!-- Header bar -->
 <header>
-    {# the values in the 'config' object are taken directly from the file app/config/config.yml #}
-    <h2><a href="{{ path('homepage') }}">{{ config.get('general/sitename') }}</a></h2>
-    {% if config.get('general/payoff') %}
-        <p>{{ config.get('general/payoff') }}</p>
-    {% endif %}
-
-    <hr>
+    <div class="banner">
+        <div class="image left"></div>
+        <div class="image right"></div>
+    </div>  
+    <a class="logo" href=""><img src="{{ asset('img/logo.svg', 'theme') }}" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>       
+    <nav>
+        <div>
+            <a href="" id="home-link">home</a>
+            <a href="follow" id="follow-link">follow</a>
+            <a href="broadcasting" id="broadcasting-link">broadcasting</a>
+        </div>
+        <div>
+            <a href="writing" id="writing-link">writing</a>
+            <a href="background" id="background-link">background</a>
+            <a href="contact" id="contact-link">contact</a>
+        </div>
+    </nav>
 </header>

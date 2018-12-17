@@ -11,8 +11,7 @@
                 {{ config.get('general/sitename') -}}
             {% if record.title is not defined and config.get('general/payoff') %} | {{ config.get('general/payoff') }}{% endif -%}
         </title>
-        <link rel="stylesheet" href="{{ asset('css/normalize.css', 'theme') }}">
-        <link rel="stylesheet" href="{{ asset('css/sakura.css', 'theme') }}">
+        <link rel="stylesheet" href="{{ asset('css/main.scss', 'theme') }}">
     </head>
     <body>
 
@@ -20,14 +19,8 @@
 
             {{ include('partials/_header.twig') }}
 
-            {{ widgets('main_top') }}
-
             {% block main %}
             {% endblock main %}
-
-            {{ widgets('main_bottom') }}
-
-            {{ include('partials/_aside.twig') }}
 
         {% endblock body %}
 
