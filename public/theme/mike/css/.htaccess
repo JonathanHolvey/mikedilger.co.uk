@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Serve minified SCSS files from SCSSPHP compiler
+RewriteRule ^(.+\.scss) /theme/mike/css/scss.php?p=$1&min [NC,L]
