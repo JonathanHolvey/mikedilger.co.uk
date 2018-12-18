@@ -1,7 +1,11 @@
 <header>
     <div class="banner">
-        <div class="image left"></div>
-        <div class="image right"></div>
+        {% if record.header_left is defined and record.header_right is defined %}
+            <div class="image left"
+                 style="background-image:url({{ record.header_left|image }})"/></div>
+            <div class="image right"
+                 style="background-image:url({{ record.header_right|image }})"></div>
+        {% endif %}
     </div>  
     <a class="logo" href=""><img src="{{ asset('img/logo.svg', 'theme') }}" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>       
     <nav>
