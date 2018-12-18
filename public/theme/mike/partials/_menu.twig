@@ -1,0 +1,7 @@
+<ul>{% for item in menu %}
+    <li class="{{ item|current ? 'current' }}"><a href={{ item.link }}>
+        {% if item.label is defined %}{{ item.label }}
+        {% elseif item.record.title is defined %}{{ item.record.title }}
+        {% else %}No label{% endif %}
+    </a></li>
+{% endfor %}</ul>

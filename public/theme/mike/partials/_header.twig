@@ -8,16 +8,5 @@
         {% endif %}
     </div>  
     <a class="logo" href=""><img src="{{ asset('img/logo.svg', 'theme') }}" alt="Mike Dilger - Broadcaster &amp; Naturalist"/></a>       
-    <nav>
-        <div>
-            <a href="" id="home-link">home</a>
-            <a href="follow" id="follow-link">follow</a>
-            <a href="broadcasting" id="broadcasting-link">broadcasting</a>
-        </div>
-        <div>
-            <a href="writing" id="writing-link">writing</a>
-            <a href="background" id="background-link">background</a>
-            <a href="contact" id="contact-link">contact</a>
-        </div>
-    </nav>
+    <nav>{{ menu('main', 'partials/_menu.twig')}} </nav>
 </header>

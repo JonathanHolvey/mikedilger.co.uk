@@ -80,13 +80,16 @@ nav {
 	text-align: center;
 	font-size: 120%;
 	cursor: default;
+	text-transform: lowercase;
 	a {
 		color: $light-grey;
+	}
+	.current > a {
+		color: $dark-orange;
+	}
+	li {
 		display: inline-block;
 		margin: 0 0.45em;
-	}
-	div {
-		display: inline-block;
 	}
 }
 .content {
