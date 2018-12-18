@@ -10,8 +10,7 @@ database:
     databasename: bolt
 
 # The name of the website
-sitename: A sample site
-payoff: The amazing payoff goes here
+sitename: Mike Dilger
 
 # The theme to use.
 #
