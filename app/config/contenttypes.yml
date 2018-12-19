@@ -16,13 +16,10 @@ homepage:
         slug:
             type: slug
             group: meta
-        header_left:
-            label: Left header image
-            type: image
-            group: media
-        header_right:
-            label: Right header image
-            type: image
+        banner:
+            label: Header image
+            type: select
+            values: banners/id,title
             group: media
     viewless: true
     singleton: true
@@ -63,15 +60,11 @@ pages:
         template:
             type: templateselect
             filter: '*.twig'
-        header_left:
-            label: Left header image
-            type: image
+        banner:
+            label: Header image
+            type: select
+            values: banners/id,title
             group: media
-        header_right:
-            label: Right header image
-            type: image
-            group: media
-    taxonomy: [ groups ]
     recordsperpage: 20
 
 
@@ -157,6 +150,26 @@ blocks:
     searchable: false
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
+
+
+banners:
+    name: Header images
+    singular_name: Header image
+    fields:
+        title:
+            type: text
+            class: large
+        left_image:
+            type: image
+            label: Left image
+        right_image:
+            type: image
+            label: Right image
+    default_status: published
+    viewless: true
+    icon_many: "fa:image"
+    icon_one: "fa:image"
+
 
 # Possible field types:
 #
