@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            {% if record.title is defined and record.contenttype.name != 'homepage' %}
+            {% if record.title is defined and record.contenttype.slug != 'homepage' %}
                 {{ record.title|striptags }} -
             {% endif %}
                 {{ config.get('general/sitename') }}
