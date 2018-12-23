@@ -159,12 +159,23 @@ banners:
         title:
             type: text
             class: large
+            group: content
         left_image:
             type: image
             label: Left image
+            group: content
+        left_description:
+            type: text
+            label: Left image description
+            group: content
         right_image:
             type: image
             label: Right image
+            group: content
+        right_description:
+            type: text
+            label: Right image description
+            group: content
     default_status: published
     viewless: true
     icon_many: "fa:image"
