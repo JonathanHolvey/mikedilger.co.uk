@@ -32,7 +32,7 @@ locale: en_GB
 
 # Set the timezone to be used on the website. For a list of valid timezone
 # settings, see: http://php.net/manual/en/timezones.php
-# timezone: UTC
+timezone: Europe/London
 
 # Set maintenance mode on or off.
 #
