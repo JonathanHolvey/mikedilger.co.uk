@@ -1,0 +1,51 @@
+version: '3.7'
+
+volumes:
+  site:
+
+networks:
+  front:
+    external: true
+    name: proxy
+  back:
+
+services:
+  web:
+    build:
+      context: ./web
+    container_name: mikedilger-web
+    networks:
+      - front
+      - back
+    environment:
+      VIRTUAL_HOST: local.mikedilger.com
+    volumes:
+      - site:/opt/site:ro
+  cms:
+    build:
+      context: ./cms
+    container_name: mikedilger-cms
+    networks:
+      - back
+    environment:
+      NODE_ENV: development
+      url: http://local.mikedilger.com
+    volumes:
+      - ./cms/content/data:/var/lib/ghost/content/data
+      - ./cms/content/images:/var/lib/ghost/content/images
+  ssg:
+    build:
+      context: ./ssg
+    container_name: mikedilger-ssg
+    networks:
+      back:
+        aliases:
+          - ssg.backend
+    environment:
+      STRAPI_API_URL: http://cms:2368
+      STRAPI_API_KEY: ${STRAPI_API_KEY}
+    volumes:
+      - ./ssg:/opt/ssg
+      - site:/opt/site
+    ports:
+      - 3000:3000
