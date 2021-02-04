@@ -1,0 +1,20 @@
+version: '3.7'
+
+networks:
+  front:
+    external: true
+    name: proxy
+  back:
+
+services:
+  web:
+    build:
+      context: ./web
+    container_name: mikedilger-web
+    networks:
+      - front
+    environment:
+      VIRTUAL_HOST: local.mikedilger.co.uk
+    volumes:
+      - ./web:/var/www/html
+    restart: on-failure
