@@ -43,7 +43,7 @@
 			<h1>twitter</h1>
 			<div class="tweets" data-max-items="1">
 				<?php
-					$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
+					$tweetCache = json_decode(file_get_contents("/tmp/cache/tweets.json"), true);
 					$tweet = $tweetCache["tweets"][0];
 					include("templates/tweet.php");
 				?>
@@ -52,7 +52,7 @@
 			<h1>coming up</h1>
 			<div class="future-events" data-max-items="1">
 				<?php
-					$eventCache = json_decode(file_get_contents("cache/events.json"), true);
+					$eventCache = json_decode(file_get_contents("/tmp/cache/events.json"), true);
 					$futureEvents = array();
 					foreach ($eventCache["events"] as $event) {
 						if ($event["end"] > time())

@@ -2,8 +2,10 @@
 include_once("../libraries/twitteroauth.php");
 include_once("../libraries/iCalReader.php");
 
-if (!is_dir("../cache"))
-	mkdir("../cache");
+const CACHE_DIR = "/tmp/cache";
+
+if (!is_dir(CACHE_DIR))
+	mkdir(CACHE_DIR);
 
 class TwitterCache {
 	function __construct($auth, $user, $count, $file) {
@@ -152,7 +154,7 @@ class CalendarCache {
 class KeyStore {
 	function __construct($id) {
 		$this->id = $id;
-		$this->filename = "../cache/keystore-" . $id . ".json";
+		$this->filename = CACHE_DIR . "/keystore-" . $id . ".json";
 		$this->loadKeys();
 	}
 	private function cacheKeys() {
