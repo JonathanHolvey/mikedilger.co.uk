@@ -14,6 +14,11 @@ services:
       - front
     environment:
       VIRTUAL_HOST: local.mikedilger.co.uk
+      TWITTER_ACCESS_TOKEN: ${TWITTER_ACCESS_TOKEN}
+      TWITTER_ACCESS_SECRET: ${TWITTER_ACCESS_SECRET}
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY}
+      TWITTER_CONSUMER_SECRET: ${TWITTER_CONSUMER_SECRET}
+      EVENTS_CALENDAR_URL: ${EVENTS_CALENDAR_URL}
     volumes:
       - ./web:/var/www/html
     restart: on-failure
