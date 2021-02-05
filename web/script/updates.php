@@ -4,9 +4,6 @@ include_once("../libraries/iCalReader.php");
 
 const CACHE_DIR = "/tmp/cache";
 
-if (!is_dir(CACHE_DIR))
-	mkdir(CACHE_DIR);
-
 class TwitterCache {
 	function __construct($auth, $user, $count, $file) {
 		$this->auth = $auth;
