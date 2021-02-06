@@ -2,14 +2,6 @@ DirectoryIndex index.php
 
 RewriteEngine On
 
-# Remove www subdomain
-RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
-RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
-# Force HTTPS
-RewriteCond %{HTTP_HOST} ^mikedilger [NC]
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 # Forward old URLs
 RewriteRule ^index.html|^index.php / [R=301,NC,L]
 RewriteRule ^background.html /background [R=301,NC,L]
@@ -27,9 +19,6 @@ RewriteRule ^(.+)\.php$ /$1 [R=301,NC,L]
 
 # Serve clean page URLs
 RewriteRule ^(follow|broadcasting|writing|background|contact|showreel)$ $1.php [NC,L]
-
-# Serve minified SCSS files from SCSSPHP compiler
-RewriteRule ^styles/([^/]+\.scss) /styles/scss.php?p=$1&min [NC,L]
 
 <IfModule mod_headers.c>
 	# Cache static assets for one year

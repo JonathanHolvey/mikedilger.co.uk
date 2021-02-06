@@ -3,8 +3,8 @@
 	$maxTweets = 6;
 	$maxEvents = 8;
 
-	$tweetCache = json_decode(file_get_contents("cache/tweets.json"), true);
-	$eventCache = json_decode(file_get_contents("cache/events.json"), true);
+	$tweetCache = json_decode(file_get_contents("/tmp/cache/tweets.json"), true);
+	$eventCache = json_decode(file_get_contents("/tmp/cache/events.json"), true);
 
 	$futureEvents = array();
 	$pastEvents = array();

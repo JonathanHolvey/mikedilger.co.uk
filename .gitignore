@@ -1,2 +1,4 @@
-scss_cache
+.sass-cache
 cache
+.env
+web/styles/main.css*

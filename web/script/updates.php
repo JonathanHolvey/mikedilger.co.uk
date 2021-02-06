@@ -2,8 +2,7 @@
 include_once("../libraries/twitteroauth.php");
 include_once("../libraries/iCalReader.php");
 
-if (!is_dir("../cache"))
-	mkdir("../cache");
+const CACHE_DIR = "/tmp/cache";
 
 class TwitterCache {
 	function __construct($auth, $user, $count, $file) {
@@ -145,30 +144,6 @@ class CalendarCache {
 			$cache = json_decode(file_get_contents($this->cacheFile), true);
 			$this->events = $cache["events"];
 			$this->modified = $cache["modified"];
-		}
-	}
-}
-
-class KeyStore {
-	function __construct($id) {
-		$this->id = $id;
-		$this->filename = "../cache/keystore-" . $id . ".json";
-		$this->loadKeys();
-	}
-	private function cacheKeys() {
-		if (!is_file($this->filename)) {
-			$url = "https://dev.rocketchilli.com/keystore/" . $this->id;
-			$data = file_get_contents($url);
-			return ($data and file_put_contents($this->filename, $data));
-		}
-		return true;
-	}
-	private function loadKeys() {
-		if ($this->cacheKeys()) {
-			$data = json_decode(file_get_contents($this->filename), true);
-			$this->service = $data["service"];
-			$this->app = $data["app"];
-			$this->keys = array_diff_key($data, array_flip(["id", "service", "app"]));
 		}
 	}
 }
